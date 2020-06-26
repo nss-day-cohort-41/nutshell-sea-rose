@@ -76,8 +76,27 @@
                     <!--No need for Container...like Events/Tasks gets?-->
                         <fieldset class="news__form">
                             <form action=""></form>
-                                <button class="button__newsFormSave"></button>
-                        </fieldset>    
+                                <button id="button__newsFormSave">New Article</button>
+                        </fieldset>  
+                        <section class="newArticle__form">
+                            <form action="">
+                                <fieldset>
+                                    <label>
+                                        News Title:
+                                        <input type="text" class="news__title" name="news__title">
+                                    </label>
+                                    <label>
+                                        Synopsis:
+                                        <input type="text" class="news__synopsis" name="synopsis">
+                                    </label>
+                                    <label>
+                                        URL:
+                                        <input type="url" class="news__url" name="news__URL">
+                                    </label>
+                                    <button type="submit" class="save__article">Save Article</button>
+                                </fieldset>
+                            </form>
+                        </section>  
                         <article class="postedNews__Selection" > </article>
             </section>
          </div>
@@ -98,5 +117,6 @@
 
     <!--SCRIPT -->
     <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/ArticlesProvider/articlesMain.js"></script>
 </body>
 </html>
