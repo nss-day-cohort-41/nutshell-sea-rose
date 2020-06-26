@@ -1,4 +1,4 @@
-import API from "./articlesCalls.js"
+import API from "./articlesProvider.js"
 import renderArticleEntries from "./articlesList.js"
 import newArticleButton from "./articlesClickEvents.js"
 import createArticleEntry from "./articlesFactory.js"

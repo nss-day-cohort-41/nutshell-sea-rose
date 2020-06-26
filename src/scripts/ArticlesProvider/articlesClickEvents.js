@@ -7,4 +7,6 @@ newArticleButton.addEventListener("click", event => {
     }
 })
 
+
+
 export default newArticleButton;
