@@ -1,19 +1,21 @@
-import API from "./authenicationProvilder"
+import API from "./authenicationProvider.js"
 
 const loginSubmitButton = document.querySelector("#login__button")
 
-export default {
-    registerLoginListener () {
+
+   const registerLoginListener = () => {
         loginSubmitButton.addEventListener("click", event => {
-            const userLogin = document.querySelector("#loginUsername")
-            const passwordLogin = document.querySelector("#loginPassword")
-            API.getSingleUser(loginId)
+            console.log("I click first", event.target.id)
+            const userLogin = document.querySelector("#loginUsername").value
+            const passwordLogin = document.querySelector("#loginPassword").value
+            API.getSingleUser()
             .then((loginArray) => {
                 // clearInputs()
                 console.log(loginId)
                 console.log(loginArray)
-                console.log("click")
+                console.log("click last")
             })
         })  
-    }
-}
+   }
+
+export default registerLoginListener
