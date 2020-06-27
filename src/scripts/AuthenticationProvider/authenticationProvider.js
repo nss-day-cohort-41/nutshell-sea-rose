@@ -1,13 +1,18 @@
 //Setting url will be used for all fetch calls
 const url = "http://localhost:3000";
 
-
-
+// These will be altered to become our fetch calls when we are ready for them
 const authenticationAPI = {
-	createUser(username, password) {
+	signInUser(username, password) {
 		alert(`username: ${username}, password: ${password}`);
+	},
+	createNewUser(username, email, password) {
+		alert(`username: ${username},  password: ${password},email: ${email}`);
 	}
 }
+
+export default authenticationAPI;
+
 
 
 
@@ -27,4 +32,3 @@ const authenticationAPI = {
 // 		}).then(response => response.json());
 //     }   
 // }
-export default auththenticationAPI;

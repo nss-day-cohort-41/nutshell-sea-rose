@@ -14,13 +14,23 @@
 
 <body>
     <section class="loginContainer">
-        <h1>Sign Up</h1>
-        <form>
-             <label for="username">Username:</label>
+        <h1>Sign In</h1>
+        <form autocomplete="on">
+            <label for="username">Username:</label>
             <input id="username" name="username" type="text" required minlength="3" maxlength="15">
             <label for="password">Password:</label>
-            <input id="pw" name="pw" type="password" required minlength="3" maxlength="15">
+            <input id="password" name="password" type="password" required minlength="3" maxlength="15">
             <input id="authentication-submit-button" type="submit" value="Sign In">
+        </form>
+        <form autocomplete="on">
+        <h1>Create Account</h1>
+            <label for="createUsername">Username:</label>
+            <input id="createUsername" name="createUsername" type="text" required minlength="3" maxlength="15">
+            <label for="createPassword">Password:</label>
+            <input id="createPassword" name="createPassword" type="password" required minlength="3" maxlength="15">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email">
+            <input id="create-account-submit-button" type="submit" value="Create Account">
         </form>
     </section>
     <!-- Added Primary Banner Breakdown-->
@@ -117,6 +127,7 @@
         <!--SCRIPT -->
         <script type="module" src="scripts/main.js"></script>
         <script type="module" src="scripts/ArticlesProvider/articlesMain.js"></script>
+        <script type="module" src=scripts/AuthenticationProvider/authenticationMain.js></script>
 </body>
 
 </html>

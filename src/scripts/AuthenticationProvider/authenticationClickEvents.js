@@ -1,17 +1,34 @@
 
 import authenticationAPI from "./authenticationProvider.js"
 
-const authenticationSubmitButton = document.querySelector("#authentication-submit-button")
+
+const authenticationSubmitButton = document.querySelector('#authentication-submit-button');
+const createAccountSubmitButton = document.querySelector('#create-account-submit-button');
+
+
+authenticationSubmitButton.addEventListener('click', e => {
+    const usernameInput = document.querySelector("#username");
+    const passwordInput = document.querySelector("#password")
+    authenticationAPI.signInUser(usernameInput.value, passwordInput.value);
+    
+});
+
+createAccountSubmitButton.addEventListener('click', e => {
+	const usernameInput = document.querySelector("#username");
+    const passwordInput = document.querySelector("#password")
+    const emailInput = document.querySelector("#email")
+    authenticationAPI.createNewUser(usernameInput.value, emailInput.value, passwordInput.value);
+    alert(usernameInput.value, emailInput.value, passwordInput.value)
+
+
+});
 
 
 
+export default {};
 
 
 
-
-
-
-// const loginSubmitButton = document.querySelector("#login__button")
 
 //    const registerLoginListener = () => {
 //         loginSubmitButton.addEventListener("click", event => {
