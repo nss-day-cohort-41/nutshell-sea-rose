@@ -1,11 +1,7 @@
 
 import authenticationAPI from "./authenticationProvider.js"
 
-const authenticationAPI = {
-	createUser(username, password) {
-		alert(`username: ${username}, password: ${password}`);
-	}
-}
+const authenticationSubmitButton = document.querySelector("#authentication-submit-button")
 
 
 
