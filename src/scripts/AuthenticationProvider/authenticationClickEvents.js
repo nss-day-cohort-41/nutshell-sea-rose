@@ -14,11 +14,11 @@ authenticationSubmitButton.addEventListener('click', e => {
 });
 
 createAccountSubmitButton.addEventListener('click', e => {
-	const usernameInput = document.querySelector("#username");
-    const passwordInput = document.querySelector("#password")
-    const emailInput = document.querySelector("#email")
-    authenticationAPI.createNewUser(usernameInput.value, emailInput.value, passwordInput.value);
-    alert(usernameInput.value, emailInput.value, passwordInput.value)
+	const newUsernameInput = document.querySelector("#createUsername").value;
+    const newUserPasswordInput = document.querySelector("#createPassword").value;
+    const emailInput = document.querySelector("#email").value;
+    authenticationAPI.createNewUser(newUsernameInput, emailInput, newUserPasswordInput);
+    
 
 
 });

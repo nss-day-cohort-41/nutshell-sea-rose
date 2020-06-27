@@ -11,10 +11,8 @@ const authenticationAPI = {
 	}
 }
 
+
 export default authenticationAPI;
-
-
-
 
 // const auththenticationAPI = {
 //     getSingleUser: (id) => {
@@ -23,7 +21,7 @@ export default authenticationAPI;
 //     },
 
 //     addAUser: (userObj) => {
-// 		return fetch(`${url}/users`, {
+// 		return fetch( {
 // 			method: "POST",
 // 			headers: {
 // 				"Content-Type": "application/json"
