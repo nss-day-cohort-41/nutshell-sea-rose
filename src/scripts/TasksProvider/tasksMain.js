@@ -32,6 +32,7 @@ else { alert("Please fill out all required inputs to create a 'Task' entry")}
 
 })
 
+
 const clearInputs = () => {
 	//document.querySelector("#hiddenEntryForm").value = "";
 	document.querySelector("#taskTitle").value = "";
