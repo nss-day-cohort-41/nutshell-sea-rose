@@ -6,117 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles/main.css">
-        <!-- FONTS COLLECTION -->
-       
-        <!-- END OF FONTS -->
+    <!-- FONTS COLLECTION -->
+
+    <!-- END OF FONTS -->
     <title>NutShell: Sea Rose</title>
 </head>
 
 <body>
-        <section class="loginContainer">
-            <h1>Sign Up</h1>
-            <p>Create an account:</p>
-            <form action="">
-                <label for="username">Username:</label>
-                <input id="username" name="username" type="text" required minlength="3" maxlength="15">
-                <label for="pw">Password:</label>
-                <input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
-                <input type="submit" value="Submit">
-            </form>
-        </section>
+    <section class="loginContainer">
+        <h1>Sign Up</h1>
+        <form>
+            <label for="loginUsername">Username:</label>
+            <input id="loginUsername" name="loginUsername" type="text" required minlength="3" maxlength="15">
+            <label for="loginPassword">Password:</label>
+            <input id="loginPassword" name="loginPassword" type="password" required minlength="3" maxlength="15">
+        </form>
+        <button id="login__button">Submit</button>
+    </section>
     <!-- Added Primary Banner Breakdown-->
-    <header class= "Header">
-            <div class="header__logo">
+    <header class="Header">
+        <div class="header__logo">
             <div class="headerTitle1">NutShell: "SEA ROSE"</div>
-            </header>
+    </header>
     <!--End of Our Main Banner -->
     <div class="underHeader">
 
         <div class="underHeader__top">
-    <!--Start of Section Containing our User Friends List, we will need to talk about how best to label out this portion-->
-                <section class="">
-                        <fieldset class="friend__form">
-                            <form action=""></form>
-                                <button class="button__searchFriend"></button> 
-                        </fieldset>
-                                <button class="button__saveFriend"></button> 
-                                <button class="button__deleteFriend"></button> 
-                        <article class="previewFriend" >
-                    
-                        </article>
-                </section>
-            
-    <!--Banner Left Contains Tasks and Events -->
-        <div class="underHeader__Left">
-            <section class="taskEvent__mainLeftContainer">
-                <section class="task__Container">
-                    <!--Article Class needed? -->
+            <!--Start of Section Containing our User Friends List, we will need to talk about how best to label out this portion-->
+            <section class="">
+                <fieldset class="friend__form">
+                    <form action=""></form>
+                    <button class="button__searchFriend"></button>
+                </fieldset>
+                <button class="button__saveFriend"></button>
+                <button class="button__deleteFriend"></button>
+                <article class="previewFriend">
+
+                </article>
+            </section>
+
+            <!--Banner Left Contains Tasks and Events -->
+            <div class="underHeader__Left">
+                <section class="taskEvent__mainLeftContainer">
+                    <section class="task__Container">
+                        <!--Article Class needed? -->
                         <fieldset class="task__formLeft">
                             <form action=""></form>
                         </fieldset>
-                                <button class="button__entrySave"></button> 
-                        <article class="task__selectionLeft" >
-                            <article class="previewEntry"></article> 
-                                <button class="button__entryDelete"></button>  
+                        <button class="button__entrySave"></button>
+                        <article class="task__selectionLeft">
+                            <article class="previewEntry"></article>
+                            <button class="button__entryDelete"></button>
                         </article>
-                </section>
-                <section class="event__Container">
-                    <!--Article Class needed? -->
+                    </section>
+                    <section class="event__Container">
+                        <!--Article Class needed? -->
                         <fieldset class="event__formRight">
                             <form action=""></form>
                         </fieldset>
-                                <button class="button__eventSave"></button> 
-                        <article class="event__selectionRight" >
-                            <article class="previewEvent"></article> 
-                                <button class="button__eventDelete"></button>  
+                        <button class="button__eventSave"></button>
+                        <article class="event__selectionRight">
+                            <article class="previewEvent"></article>
+                            <button class="button__eventDelete"></button>
                         </article>
-                </section> 
-            </section>
-            <section class="news__mainRightContainer">
-                    <!--No need for Container...like Events/Tasks gets?-->
-                        <fieldset class="news__form">
-                            <form action=""></form>
-                                <button id="button__newsFormSave">New Article</button>
-                        </fieldset>  
-                        <section class="newArticle__form">
-                            <form action="">
-                                <fieldset>
-                                    <label>
-                                        News Title:
-                                        <input type="text" class="news__title" name="news__title">
-                                    </label>
-                                    <label>
-                                        Synopsis:
-                                        <input type="text" class="news__synopsis" name="synopsis">
-                                    </label>
-                                    <label>
-                                        URL:
-                                        <input type="url" class="news__url" name="news__URL">
-                                    </label>
-                                    <button type="submit" class="save__article">Save Article</button>
-                                </fieldset>
-                            </form>
-                        </section>  
-                        <article class="postedNews__Selection" > </article>
-            </section>
-         </div>
-    <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
-         <div class="underHeader__Right">
-            <section class="userWithChat___Container">
-                <section class="chat__Container">
+                    </section>
                 </section>
-                <article class="userMessage__bottomSelection">              
+                <section class="news__mainRightContainer">
+                    <!--No need for Container...like Events/Tasks gets?-->
+                    <fieldset class="news__form">
+                        <form action=""></form>
+                        <button id="button__newsFormSave">New Article</button>
+                    </fieldset>
+                    <section class="newArticle__form">
+                        <form action="">
+                            <fieldset>
+                                <label>
+                                    News Title:
+                                    <input type="text" class="news__title" name="news__title">
+                                </label>
+                                <label>
+                                    Synopsis:
+                                    <input type="text" class="news__synopsis" name="synopsis">
+                                </label>
+                                <label>
+                                    URL:
+                                    <input type="url" class="news__url" name="news__URL">
+                                </label>
+                                <button type="submit" class="save__article">Save Article</button>
+                            </fieldset>
+                        </form>
+                    </section>
+                    <article class="postedNews__Selection"> </article>
+                </section>
+            </div>
+            <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
+            <div class="underHeader__Right">
+                <section class="userWithChat___Container">
+                    <section class="chat__Container">
+                    </section>
+                    <article class="userMessage__bottomSelection">
                     </article>
                 </section>
+            </div>
         </div>
-    </div>
 
-    <!--End of Banners and BEGINs FOOTER -->
-    <footer class="footer"></footer>
+        <!--End of Banners and BEGINs FOOTER -->
+        <footer class="footer"></footer>
 
 
-    <!--SCRIPT -->
-    <script type="module" src="scripts/main.js"></script>
-    <script type="module" src="scripts/ArticlesProvider/articlesMain.js"></script>
+        <!--SCRIPT -->
+        <script type="module" src="scripts/main.js"></script>
+        <script type="module" src="scripts/ArticlesProvider/articlesMain.js"></script>
 </body>
+
 </html>
