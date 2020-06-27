@@ -11,7 +11,6 @@
         <!-- END OF FONTS -->
     <title>NutShell: Sea Rose</title>
 </head>
-
 <body>
         <section class="loginContainer">
             <h1>Sign Up</h1>
@@ -46,22 +45,35 @@
                         </article>
                 </section>
             
-    <!--Banner Left Contains Tasks and Events -->
+    <!--Banner Left Contains Tasks and Events section  -->
         <div class="underHeader__Left">
             <section class="taskEvent__mainLeftContainer">
+    <!-- Tasks Section written by Trigg Summs -->
                 <section class="task__Container">
-                    <!--Article Class needed? -->
-                        <fieldset class="task__formLeft">
-                            <form action=""></form>
-                        </fieldset>
-                                <button class="button__entrySave"></button> 
-                        <article class="task__selectionLeft" >
-                            <article class="previewEntry"></article> 
-                                <button class="button__entryDelete"></button>  
-                        </article>
-                </section>
+                    <section class="newTaskLeft__form">
+                        <form action="">
+                            <fieldset>
+                                <label>
+                                    Task Title or (Location)
+                                    <input type="text" class="task__title" name="task__title">
+                                </label>
+                                <label>
+                                    Specific Task and Duty
+                                    <input type="text" class="task__specificTask" name="task__specificTask">
+                                </label>
+                                <label>
+                                    Expected Completion Date
+                                    <input type="date" class="task__date" name="task__date">
+                                </label>
+                                <button type="submit" id="button__taskSave" value="">New Task</button>
+                                <!-- <button id="editTask" type="button" value= "">Submit Task Adjustments</button> -->
+                            </fieldset>
+                        </form>
+                    </section> 
+                         <article class="previewTask__Container" id="previewTask__Container"></article>   
+                </section> 
+    <!-- Start of Events Container -->
                 <section class="event__Container">
-                    <!--Article Class needed? -->
                         <fieldset class="event__formRight">
                             <form action=""></form>
                         </fieldset>
@@ -96,7 +108,8 @@
     <footer class="footer"></footer>
 
 
-    <!--SCRIPT -->
-    <script type="module" src="scripts/main.js"></script>
+    <!--SCRIPT 
+    <script type="module" src="scripts/main.js"></script>-->
+    <script type="module" src="scripts/TasksProvider/tasksMain.js"></script>
 </body>
 </html>
