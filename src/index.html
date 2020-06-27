@@ -53,24 +53,26 @@
                     <section class="newTaskLeft__form">
                         <form action="">
                             <fieldset>
-                                <label>
-                                    Task Title or (Location)
-                                    <input type="text" class="task__title" name="task__title">
-                                </label>
-                                <label>
-                                    Specific Task and Duty
-                                    <input type="text" class="task__specificTask" name="task__specificTask">
-                                </label>
-                                <label>
-                                    Expected Completion Date
-                                    <input type="date" class="task__date" name="task__date">
-                                </label>
-                                <button type="submit" id="button__taskSave" value="">New Task</button>
+                                <label for="task__title">Task Title or (Location)</label>
+                                    <input type="text" id="task__title" name="task__title">
+                                
+                                <label for="task__specificTask">Specific Task and Duty</label>
+                                    <input type="text" id="task__specificTask" name="task__specificTask">
+                                
+                                <label for="task__date">Expected Completion Date</label>
+                                    <input type="date" id="task__date" name="task__date">
+                                
+                                <button type="button" id="button__taskSave" value="">New Task</button>
                                 <!-- <button id="editTask" type="button" value= "">Submit Task Adjustments</button> -->
                             </fieldset>
                         </form>
+                       <!-- HiddenTaskForm -->
+                        <form>
+                            <input type="hidden" id="hiddenTaskForm" value="" />
+                            ...
+                        </form>
                     </section> 
-                         <article class="previewTask__Container" id="previewTask__Container"></article>   
+                         <article id="previewTask__Container"></article>   
                 </section> 
     <!-- Start of Events Container -->
                 <section class="event__Container">

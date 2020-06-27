@@ -2,6 +2,16 @@ import API from './tasksProvider.js';
 import renderedTasksDOM from './tasksList.js';
 import makeTask from './tasksFactory.js';
 import registerListeners from './tasksClickEvents.js';
+import updateFormFields from './tasksFieldForms.js'
+
+
+//Current Status 6/27---> Ive been trying a few different tweaks with no sucess. Currently I am able to post null statements and delete but my edit functionality is not working.
+
+
+
+
+
+
 
 
 
@@ -18,29 +28,28 @@ document.querySelector("#button__taskSave")
       at a time, and accessing the `value` property
   */
 
-//Need to target the ID's****************************************************************************************
-  let taskTitle = document.querySelector("#taskTitle").value;
-  let taskName = document.querySelector("#taskName").value;
-  let expectedCompletionDate = document.querySelector("#expectedCompletionDate").value;
-  let complete = document.querySelector("#complete").value;
+  let taskTitle = document.querySelector("#taskTitle");
+  let taskName = document.querySelector("#taskName");
+  let expectedCompletionDate = document.querySelector("#expectedCompletionDate");
+  let complete = document.querySelector("#complete");
 
-  if (concept !== "" && date !== "" && mood !== "" && entry !== "")
-  { let createdTaskEntry= createdTask(taskTitle, taskName, expectedCompletionDate, complete)
+  if (taskTitle !== "" && taskName !== "" && expectedCompletionDate !== "")
+  { let createdTaskEntry= makeTask(taskTitle, taskName, expectedCompletionDate)
      API.addTask(createdTaskEntry)}
-     //AddTask may the wrong value
+     
 else { alert("Please fill out all required inputs to create a 'Task' entry")}
-
+// && complete !== ""
 })
 
-
+  
 const clearInputs = () => {
-	//document.querySelector("#hiddenEntryForm").value = "";
+	document.querySelector("#hiddenEntryForm").value = "";
 	document.querySelector("#taskTitle").value = "";
 	document.querySelector("#taskName").value = "";
 	document.querySelector("#expectedCompletionDate").value = "";
-	document.querySelector("#complete").value = "";  
+	//document.querySelector("#complete").value = "";  
 }
- 
+  
 
 //Would I want to target the edit or save ID?
 const saveTask = document.querySelector("#button__taskSave")
@@ -52,16 +61,16 @@ console.log("yeet")
 		const taskTitleInput = document.querySelector("#taskTitle").value;
 		const taskNameInput = document.querySelector("#taskName").value;
 		const expectedCompletionDateInput = document.querySelector("#expectedCompletionDate").value;
-		const completeInput = document.querySelector("#complete").value;
-		//(concept, date, mood, entry)
-		API.updateTask(hiddenTaskForm.value, taskObj(taskTitleInput, taskNameInput, expectedCompletionDateInput, completeInput))
+		//const completeInput = document.querySelector("#complete").value;
+		
+		API.completeTask(hiddenTaskForm.value, taskObj(taskTitleInput, taskNameInput, expectedCompletionDateInput))
 		.then(() => {
             clearInputs();
             renderedTasksDOM.renderTaskEntries()
 		});
     } else {
 		// Save functionality goes here
-		console.log("should be able tp see the save a new one functionality");
+		console.log("should be able to see the save a new one functionality");
     }
 
 });

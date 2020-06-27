@@ -1,5 +1,6 @@
 import API from './tasksProvider.js';
-import renderTaskEntries from "./tasksList.js"; 
+import renderTaskEntries from "./tasksList.js";
+import updateFormFields from "./tasksFieldForms.js" 
 
 
 //import updateFormFields from "./taskFormFields.js"
@@ -9,7 +10,9 @@ import renderTaskEntries from "./tasksList.js";
 const previewTaskContainer = document.querySelector("#previewTask__Container");
 
 export default {
+
 	registerListeners() {
+		//Do i want my EventListener on previewTask Container
 		previewTaskContainer.addEventListener("click", event => {
 			console.log("what the heck is the event", event.target.id);
 			//Get the id from the event.target.id
@@ -22,7 +25,7 @@ export default {
                 .then(renderTaskEntries)
                 
             }
-            //Maybe use an array method to target an id and delete
+            //Maybe use an array method to target an id and mark complete field from true to false
             else if(event.target.id.startsWith("completeTask--")) {
 				const taskToComplete = event.target.id.split("--")[1];
 				console.log(taskToComplete);

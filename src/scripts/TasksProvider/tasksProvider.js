@@ -1,5 +1,6 @@
 import  renderedTasksDOM from './tasksList.js';
-//import makeTask from './tasksFactory.js';
+import makeTask from './tasksFactory.js';
+
 
 
 const url = "http://localhost:5055";
@@ -13,7 +14,7 @@ const API = {
             })
     },
     //Added Entries, Went through this step with Tyler and Im still trying to wrap my head around it. I guess were invoking the response so that it works with the renderJournalEntries to clear lists?
-    saveTask: (makeTask) => {
+    addTask: (makeTask) => {
         return fetch("http://localhost:5055/Tasks", {
             method: "POST",
             headers: {
@@ -22,9 +23,13 @@ const API = {
             body: JSON.stringify(makeTask)
         }).then(() => API.getTasks()).then((response) => {
 
-            renderedTasksDOM.renderTaskEntires(response)
+            renderedTasksDOM.renderTaskEntries(response)
         })
     },
+/*     getSingleTask: (id) => {
+		return fetch(`${url}/Tasks/${id}`)
+		.then(response => response.json());
+	}, */
 
     //Because POST is default I should be able to take out headers and body.json.
     //Trying my hand at the delete properties
@@ -43,10 +48,10 @@ const API = {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(makeTasks)   
+            body: JSON.stringify(makeTask)   
         }).then(() => API.getTasks()).then((response) => {
 
-            renderedTasksDOM.renderTaskEntries(makeTasks)
+            renderedTasksDOM.renderTaskEntries(makeTask)
         })
     } 
     
