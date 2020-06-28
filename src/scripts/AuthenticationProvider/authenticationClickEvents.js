@@ -6,13 +6,15 @@ const submitLoginButton = document.querySelector("#loginButton")
 
 const sessionStorageLogIn = () => {
     submitLoginButton.addEventListener('click', event => {
-        fetch('http://localhost:3000/users')
-            .then(res => res.json())
+        API.getAllUsers()
             .then(userArray => {
-                let user = userArray.find(function (user) {
-                    return user.user === userLogin.value
+                let user = userArray.find((user) => {
+                    if (passwordLogin.value === user.password && user.user === userLogin.value) {
+                        return user.user === userLogin.value
+                    } 
                 })
                 sessionStorage.id = user.id
+                sessionStorage.user = user.user
                 console.log(sessionStorage)
             })
     })

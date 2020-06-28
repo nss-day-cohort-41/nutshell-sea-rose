@@ -1,7 +1,10 @@
 // Setting url that will be used for all fetch calls
-const url = "http://localhost:3000";
-
 const API = {
+
+    getAllUsers: () => {
+      return fetch(`http://localhost:3000/users/`)
+      .then(response => response.json());
+    },
   
     getSingleUser: (id) => {
     //return fetch(`${url}/users/${id}`)
