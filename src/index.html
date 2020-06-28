@@ -14,17 +14,18 @@
 
 <body>
     <section class="loginContainer">
-        <h1>Sign In</h1>
-        <form autocomplete="on">
-            <label for="username">Username:</label>
-            <input id="username" name="username" type="text" required minlength="3" maxlength="15">
-            <label for="password">Password:</label>
-            <input id="password" name="password" type="password" required minlength="3" maxlength="15">
-            <input id="authentication-submit-button" type="submit" value="Sign In">
+        <h1>Sign Up</h1>
+        <form>
+            <label for="loginUsername">Username:</label>
+            <input id="loginUsername" name="loginUsername" type="text" required minlength="3" maxlength="15">
+            <label for="loginPassword">Password:</label>
+            <input id="loginPassword" name="loginPassword" type="password" required minlength="3" maxlength="15">
+            <button id="loginButton">Submit</button>
             <input id="signout-button" type="button" value="Sign Out">
         </form>
+        
         <form autocomplete="on">
-        <h1>Create Account</h1>
+            <h1>Create Account</h1>
             <label for="createUsername">Username:</label>
             <input id="createUsername" name="createUsername" type="text" required minlength="3" maxlength="15">
             <label for="createPassword">Password:</label>
@@ -34,6 +35,7 @@
             <input id="create-account-submit-button" type="submit" value="Create Account">
         </form>
     </section>
+
     <!-- Added Primary Banner Breakdown-->
     <header class="Header">
         <div class="header__logo">
