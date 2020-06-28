@@ -1,18 +1,33 @@
 //Setting url will be used for all fetch calls
-const url = "http://localhost:3000";
+const url = "http://localhost:3000/users"
+	
 
 // These will be altered to become our fetch calls when we are ready for them
+
+
 const authenticationAPI = {
-	signInUser(username, password) {
-		alert(`username: ${username}, password: ${password}`);
+	signInUser() {
+		console.log((`${url}.value`))
+		
 	},
 	createNewUser(username, email, password) {
-		alert(`username: ${username},  password: ${password},email: ${email}`);
-	}
+		return fetch(`username: ${username}, password: ${password},email: ${email}`)
+		.then(response => response.json());
+	} 
 }
 
 
-export default authenticationAPI;
+
+
+
+
+// url.forEach(user => {
+
+//     for (const value of Object.values(user)) {
+//       console.log(value)
+//     }
+// })
+
 
 // const auththenticationAPI = {
 //     getSingleUser: (id) => {
@@ -30,3 +45,5 @@ export default authenticationAPI;
 // 		}).then(response => response.json());
 //     }   
 // }
+
+export default authenticationAPI;
