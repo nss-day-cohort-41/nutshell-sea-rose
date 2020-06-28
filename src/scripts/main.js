@@ -1,3 +1,3 @@
-import registerLoginListener from "./AuthenticationProvider/authenticationClickEvents.js"
+import sessionStorageLogIn from "./AuthenticationProvider/authenticationClickEvents.js"
 
-registerLoginListener()
+sessionStorageLogIn()
