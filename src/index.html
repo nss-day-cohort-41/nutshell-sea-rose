@@ -30,7 +30,6 @@
             </header>
     <!--End of Our Main Banner -->
     <div class="underHeader">
-
         <div class="underHeader__top">
     <!--Start of Section Containing our User Friends List, we will need to talk about how best to label out this portion-->
                 <section class="">
@@ -41,7 +40,6 @@
                                 <button class="button__saveFriend"></button> 
                                 <button class="button__deleteFriend"></button> 
                         <article class="previewFriend" >
-                    
                         </article>
                 </section>
             
@@ -51,29 +49,36 @@
     <!-- Tasks Section written by Trigg Summs -->
                 <section class="task__Container">
                     <section class="newTaskLeft__form">
-                        <form action="">
-                            <fieldset>
-                                <label for="task__title">Task Title or (Location)</label>
-                                    <input type="text" id="task__title" name="task__title">
-                                
-                                <label for="task__specificTask">Specific Task and Duty</label>
-                                    <input type="text" id="task__specificTask" name="task__specificTask">
-                                
-                                <label for="task__date">Expected Completion Date</label>
-                                    <input type="date" id="task__date" name="task__date">
-                                
-                                <button type="button" id="button__taskSave" value="">New Task</button>
-                                <!-- <button id="editTask" type="button" value= "">Submit Task Adjustments</button> -->
-                            </fieldset>
-                        </form>
-                       <!-- HiddenTaskForm -->
-                        <form>
+                      <form >
+                            <div id="taskContainer"></div>
+                            <section id="taskForm">
+                             <form>
                             <input type="hidden" id="hiddenTaskForm" value="" />
                             ...
-                        </form>
-                    </section> 
-                         <article id="previewTask__Container"></article>   
+                            </form> 
+                        
+                        </section>
+                            <fieldset>
+                                <label for="task__title">Task (Location)</label>
+                                    <input type="form" name="task__title" id="taskTitle" >
+                                
+                                <label for="task__specificTask">Specific Task</label>
+                                    <input type="form" name="task__specificTask" id="taskName" >
+                                
+                                <label for="task__date">Expected Completion Date</label>
+                                    <input type="date" name="task__date" id="expectedCompletionDate" value="">
+                                
+                               
+                                <!-- <button id="editTask" type="button" value= "">Submit Task Adjustments</button> -->
+                            </fieldset>
+                        
+                        <button id="taskSave" type="submit" value="" >Submit your Task!</button>
+                       <!-- HiddenTaskForm -->
+                       </form>
+                       <article id="previewTask__Container" ></article>  
                 </section> 
+                          
+            </section> 
     <!-- Start of Events Container -->
                 <section class="event__Container">
                         <fieldset class="event__formRight">

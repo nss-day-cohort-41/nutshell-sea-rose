@@ -1,6 +1,8 @@
 import  renderedTasksDOM from './tasksList.js';
 import makeTask from './tasksFactory.js';
 
+//Code by Trigg Summs
+//Contains my FETCH CALL METHODS!
 
 
 const url = "http://localhost:5055";
@@ -26,7 +28,7 @@ const API = {
             renderedTasksDOM.renderTaskEntries(response)
         })
     },
-/*     getSingleTask: (id) => {
+        /*     getSingleTask: (id) => {
 		return fetch(`${url}/Tasks/${id}`)
 		.then(response => response.json());
 	}, */
@@ -41,7 +43,7 @@ const API = {
             renderedTasksDOM.renderTaskEntries(response)
         })
     },
-//Edit operation....? 
+//Edit operation
     completeTask: (id, makeTask) => {
         return fetch(`${url}/Tasks/${id}`, {
             method: "PUT",
@@ -49,9 +51,9 @@ const API = {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(makeTask)   
-        }).then(() => API.getTasks()).then((response) => {
+        }).then(() => API.getTasks()).then(() => {
 
-            renderedTasksDOM.renderTaskEntries(makeTask)
+           renderedTasksDOM.renderTaskEntries(makeTask)
         })
     } 
     

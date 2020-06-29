@@ -1,13 +1,22 @@
-const makeTask = (taskTitle, taskName, expectedCompletionDate, complete) => {
-	const basicTaskObject = {
+//Code by Trigg Summs 
+//Factory Object Created Below
+
+
+
+const makeTask = (taskTitle, taskName, expectedCompletionDate) => {
+	const taskObj = {
         
         taskTitle: taskTitle,
         taskName: taskName,
         expectedCompletionDate: expectedCompletionDate
-        //complete: complete
+        
 	}
 
-	return basicTaskObject;
+	return taskObj;
 }
 
 export default makeTask;
+
+
+//GRAVEYEARD BELOW:
+//complete: complete
