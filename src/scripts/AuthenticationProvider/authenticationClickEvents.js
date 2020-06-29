@@ -42,10 +42,19 @@ const sessionStorageLogIn = () => {
     })
 }
 
+//Factory Function for creating new user
+
+const makeUser = (user, email, password) => {
+    const newUser = {
+        user: user,
+        email: email,
+        password: password
+    }
+    return newUser;
+}
+
 
 const createAccountButton = document.querySelector("#create-account-button")
-
-
 
 //get values from input fields (consolelog)
 //once you have the input, create newUser object with factory function
