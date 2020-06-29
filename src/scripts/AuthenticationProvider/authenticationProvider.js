@@ -9,13 +9,13 @@ const API = {
 	createUser: (newUser) => {
 		
 		console.log(newUser);
-		return fetch("http://localhost:3000/users"), {
+		return fetch("http://localhost:3000/users", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
 			},
 			body: JSON.stringify(newUser)
-		}.then(response => response.json())
+		}).then(response => response.json())
 		
 	}
 	
