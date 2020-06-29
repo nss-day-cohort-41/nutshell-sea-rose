@@ -12,7 +12,12 @@ const API = {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(newEntryObject)
-        })
+        }).then(response => response.json());
+    },
+    deleteArticle: (id) => {
+        return fetch(`http://localhost:3000/articles/${id}`, {
+            method: "DELETE"
+        }).then(response => response.json());
     }
 }
 
