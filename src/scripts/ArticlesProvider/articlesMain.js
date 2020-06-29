@@ -3,9 +3,9 @@ import makeArticleList from "./articlesList.js"
 import newArticleButton from "./articlesClickEvents.js"
 import createArticleEntry from "./articlesFactory.js"
 
-
+//render the original list into the browser
 API.getAllArticles().then((response) => makeArticleList(response));
-
+//save a new one once all required fields are entered
 const recordArticleEntry = document.querySelector(".save__article")
 recordArticleEntry.addEventListener("click", event => {
     const title = document.querySelector(".news__title").value
@@ -20,10 +20,11 @@ recordArticleEntry.addEventListener("click", event => {
         let newArticle = createArticleEntry(title, synopsis, url)
         console.log(newArticle)
         API.saveArticleEntry(newArticle)//.then(() => {
-            API.getAllArticles().then((response) => makeArticleList(response));
+        API.getAllArticles().then((response) => makeArticleList(response));
         //})
     }
 })
+
 
 
 
@@ -106,7 +107,7 @@ const clearInputs = () => {
 
 
 //code in progress to allow user to utilize factory function to create new entry
-//alert will make sure they have filled out all required fields. 
+//alert will make sure they have filled out all required fields.
 
 const recordArticleEntry = document.querySelector(".save__article")
 recordArticleEntry.addEventListener("click", event => {
