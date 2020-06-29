@@ -59,22 +59,32 @@
                                 <button class="button__entryDelete"></button>  
                         </article>
                 </section>
-                <section class="event__Container">
-                    <!--Article Class needed? -->
-                        <fieldset class="event__formRight">
-                            <form action=""></form>
+                <button id="button__newsFormSave">New Article</button>
+                <section class="newEvent__form">
+                    <form action="">
+                        <input type="hidden" id="eventId" value="" />
+                        <fieldset>
+                            <label>
+                                Event Name:
+                                <input type="text" class="event__title" name="event__name">
+                            </label>
+                            <label>
+                                Event Date:
+                                <input type="date" class="event__date" name="event__date">
+                            </label>
+                            <label>
+                                Location:
+                                <input type="text" class="event__location" name="event__location">
+                            </label>
+                            <button type="submit" class="save__event">Save Event</button>
                         </fieldset>
-                                <button class="button__eventSave"></button> 
-                        <article class="event__selectionRight" >
-                            <article class="previewEvent"></article> 
-                                <button class="button__eventDelete"></button>  
-                        </article>
+                    </form>
                 </section> 
+                
             </section>
             <section class="news__mainRightContainer">
                     <!--No need for Container...like Events/Tasks gets?-->
-                        <fieldset class="news__form">
-                            <form action=""></form>
+        
                             <!--Button to populate a form for articles-->
                                 <button id="button__newsFormSave">New Article</button>
                         </fieldset>  
@@ -98,10 +108,11 @@
                                     <button type="submit" class="save__article">Save Article</button>
                                 </fieldset>
                             </form>
-                        </section>  
-                        <article id="hidden__article" class="postedNews__Selection" > </article>
-                        <p>Date/Time:</p>
-                        <p id="datetime"></p>
+                        </section> 
+                        <h1>Events</h1>
+                        <article id="hidden__events" class="postedEvents__Selection"></article>
+                        <h1>News</h1> 
+                        <article id="hidden__article" class="postedNews__Selection" ></article>
             </section>
          </div>
     <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
@@ -122,5 +133,6 @@
     <!--SCRIPT -->
     <script type="module" src="scripts/main.js"></script>
     <script type="module" src="scripts/ArticlesProvider/articlesMain.js"></script>
+    <script type="module" src="scripts/EventsProvider/eventsMain.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@ export default {
             }
         })
         //playing around with trying to get the timestamp
-        var dateTime = Date();
-        document.getElementById("datetime").innerHTML = dateTime.toLocaleString();
+        //var dateTime = Date();
+        //document.getElementById("datetime").innerHTML = dateTime.toLocaleString();
     }
 }

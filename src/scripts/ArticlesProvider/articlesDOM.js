@@ -7,6 +7,7 @@ const makeArticleHTML = (articleObj) => {
 	<p>${articleObj.title}</p>
 	<p>${articleObj.synopsis}</p>
     <p>${articleObj.url}</p>
+    <p>Date.now()</p>
     <button id="deleteArticle--${articleObj.id}">Delete</button>
 	</div>
 	`
