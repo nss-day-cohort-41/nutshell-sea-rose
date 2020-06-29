@@ -1,3 +1,4 @@
-import sessionStorageLogIn from "./AuthenticationProvider/authenticationClickEvents.js"
+import {sessionStorageLogIn, createNewUser} from "./AuthenticationProvider/authenticationClickEvents.js"
 
 sessionStorageLogIn()
+createNewUser()

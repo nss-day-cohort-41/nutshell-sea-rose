@@ -2,7 +2,7 @@
 const API = {
 
     getAllUsers: () => {
-      return fetch("http://localhost:3000/users/")
+      return fetch("http://localhost:3000/users")
       .then(response => response.json());
     },
   
@@ -11,25 +11,19 @@ const API = {
     // return fetch(`http://localhost:3000/Users/${id}`)
 	// 	.then(response => response.json());
 	// },
-	createUser: (username, email, password) => {
-		return fetch(`${url}/users`, {
+	createUser: (newUser) => {
+		
+		console.log(username, email, password);
+		return fetch("http://localhost:3000/users"), {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
 			},
-			body: JSON.stringify(username, email, password)
-		}).then(response => response.json())
+			body: JSON.stringify(newUser)
+		}.then(response => response.json())
 		
-
 	}
 	
-	// createUser: (username, email, password) => {
-	// 	return fetch(`${url}/users`,
-	// 		method: 'POST',
-	// 		headers: { 'Content-Type': 'application/json' },
-	// 		body: JSON.stringify({ username: username, email: email, password: password })
-		
-	// })		.then(response => response.json());
 }
 
 export default API;
