@@ -43,11 +43,14 @@ recordArticleEntry.addEventListener("click", event => {
 
 
 
-const deleteArticleEntry = document.querySelector(".anything")
+const deleteArticleEntry = document.querySelector(".postedNews__Selection")
 deleteArticleEntry.addEventListener("click", event => {
     if (event.target.id.startsWith("deleteArticle--")) {
         const deleteIt = event.target.id.split("--")[1];
         console.log(event);
+
+       API.deleteArticle(event)
+        .then(renderArticleEntries)
     }
 })
 

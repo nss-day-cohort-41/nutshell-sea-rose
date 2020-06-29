@@ -11,6 +11,9 @@ const makeArticleHTML = ( articleObj ) => {
 	<button class="anything" id="deleteArticle--${articleObj.id}">
 	Delete Article
 	</button>
+	<button class="edit" id="editArticle--${articleObj.id}">
+	Edit Article
+	</button>
 	`
 	return domElement
 }

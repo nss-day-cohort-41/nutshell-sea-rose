@@ -14,6 +14,11 @@ const API = {
             body: JSON.stringify(newEntryObject)
         })
     },
+    deleteArticle: (id) => {
+        return fetch("http://localhost:3000/articles", {
+            method: "DELETE"
+        }).then(response => response.json());
+    }
 }
 
 export default API; 
