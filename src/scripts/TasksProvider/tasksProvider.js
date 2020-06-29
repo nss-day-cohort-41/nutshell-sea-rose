@@ -15,17 +15,17 @@ const API = {
                 API.allTasks = tasksArray;
             })
     },
-    //Added Entries, Went through this step with Tyler and Im still trying to wrap my head around it. I guess were invoking the response so that it works with the renderJournalEntries to clear lists?
+//Added Entries, Went through this step with Tyler and Im still trying to wrap my head around it. I guess were invoking the response so that it works with the renderJournalEntries to clear lists?
     addTask: (makeTask) => {
         return fetch("http://localhost:5055/Tasks", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(makeTask)
-        }).then(() => API.getTasks()).then((response) => {
+            body: JSON.stringify(makeTask) })
+            .then(() => API.getTasks()).then((response) => {
 
-            renderedTasksDOM.renderTaskEntries(response)
+                renderedTasksDOM.renderTaskEntries(response)
         })
     },
         /*     getSingleTask: (id) => {
@@ -33,10 +33,10 @@ const API = {
 		.then(response => response.json());
 	}, */
 
-    //Because POST is default I should be able to take out headers and body.json.
-    //Trying my hand at the delete properties
+//Because POST is default I should be able to take out headers and body.json.
+//Trying my hand at the delete properties
     deleteTask: (id) => {
-        return fetch(`${url}/Tasks/${id}`, {
+        return fetch(`http://localhost:5055/Tasks/${id}`, {
             method: "DELETE"
         }).then(() => API.getTasks()).then((response) => {
 
@@ -54,14 +54,11 @@ const API = {
         })
         .then(() => API.getTasks()).then(() => {
 
-      renderedTasksDOM.renderTaskEntries(makeTask)})
+            renderedTasksDOM.renderTaskEntries()})
     } 
     
 
 
 }
-
-
-
 
 export default API;

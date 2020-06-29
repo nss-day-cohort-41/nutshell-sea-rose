@@ -14,6 +14,7 @@ const makeTaskHTMLRepresentation = {
                 <p><i>Expected Completion Date:</i> ${taskObj.expectedCompletionDate}</p>
                 <input class= "checkbox" id="completeTask--${taskObj.id}" type="checkbox">Update As Complete!</input>
                 <button id="deleteTask--${taskObj.id}">Delete</button> 
+                
     </section>
     `
     }

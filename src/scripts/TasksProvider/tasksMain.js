@@ -50,7 +50,7 @@ registerListeners.registerListeners();
 
 
 // This is where I have begun the eventlistening process for the complete/edit feature. Currently I am targetting an incorrect field
-const completeTask = document.querySelector("#taskSave")
+const completeTask = document.querySelector("#taskEdit")
 completeTask.addEventListener("click", event => {
   console.log("yeet")
 
