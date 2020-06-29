@@ -14,7 +14,7 @@ const sessionStorageLogIn = () => {
         API.getAllUsers()
             .then(userArray => {
                 let user = userArray.find((user) => {
-                    
+
                     // Validation for password and username
                     if (passwordLogin.value === user.password && user.user === userLogin.value) {
                         return user.user
@@ -25,7 +25,7 @@ const sessionStorageLogIn = () => {
                 sessionStorage.id = user.id
                 sessionStorage.user = user.user
                 console.log(sessionStorage)
-                
+
             })
     })
 }
@@ -38,7 +38,7 @@ const makeUser = (user, email, password) => {
         password: password
     };
     return newUserTemplate;
-    
+
 }
 
 const createAccountButton = document.querySelector("#create-account-button");
@@ -48,26 +48,22 @@ const createAccountButton = document.querySelector("#create-account-button");
 //call the new object 
 const createNewUser = () => {
     createAccountButton.addEventListener("click", event => {
-        
+
         const createUsername = document.querySelector("#createUsername").value;
         const createEmail = document.querySelector("#createEmail").value;
         const createPassword = document.querySelector("#createPassword").value;
         const newUserLoginInfo = makeUser(createUsername, createEmail, createPassword);
         console.log("Created New User!", newUserLoginInfo)
-        
-        API.createUser(newUserLoginInfo)
-        // .then(()=>{
-        //     getAllUsers();
-        })
-        // console.log("Username:", createUsername, "Email:", createEmail, "Password:", createPassword)
-        // API.createUser(newUser)
-        //     .then(newUser => {
-        //     localStorage.clear() // If there was a user signed in, this will
-        //     localStorage.id = newUser.id //Then we can store the id we got
-        
-        //     })
-    
 
+        API.createUser(newUserLoginInfo)
+        .then(user => {
+            sessionStorage.clear();
+            sessionStorage.id = user.id
+            sessionStorage.user = user.user
+            console.log(localStorage.id)
+        })
+
+    })
 }
 
-export {sessionStorageLogIn, createNewUser, makeUser}
+export { sessionStorageLogIn, createNewUser, makeUser }
