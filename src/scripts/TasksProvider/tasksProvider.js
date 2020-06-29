@@ -45,16 +45,16 @@ const API = {
     },
 //Edit operation
     completeTask: (id, makeTask) => {
-        return fetch(`${url}/Tasks/${id}`, {
+        return fetch(`http://localhost:5055/Tasks/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(makeTask)   
-        }).then(() => API.getTasks()).then(() => {
-
-           renderedTasksDOM.renderTaskEntries(makeTask)
         })
+        .then(() => API.getTasks()).then(() => {
+
+      renderedTasksDOM.renderTaskEntries(makeTask)})
     } 
     
 

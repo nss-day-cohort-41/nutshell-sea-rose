@@ -28,14 +28,31 @@ export default {
             else if(event.target.id.startsWith("completeTask--")) {
 				const taskToComplete = event.target.id.split("--")[1];
 				console.log("hell yuh, this is the clickEvent for completeTask", taskToComplete);
+ 
+				updateFormFields(taskToComplete)
 
-				//API.completeTask(taskToComplete)
-				//.then((API.getTasks))
-				//.then(renderTaskEntries) 
-				updateFormFields(taskToComplete);
-                //This else if statement may be wrong
-                //updateFormFields(taskToComplete)......for ref. all of this "else if statement" is based off of edit entry from my journalentries
 			}
 		})
+	},
+	//Maybe recall the clear inputs function ?
+	clearInputs(){
+		//document.querySelector("#hiddenEntryForm").value = "";
+		document.querySelector("#taskTitle").value = "";
+		document.querySelector("#taskName"),value = "";
+		document.querySelector("#expectedCompletionDate").value = "";
+		document.querySelector("#complete").value = "";  
 	}
+
 }
+
+
+
+//GRAVEYARD: 
+//API.completeTask(taskToComplete)
+//.then((API.getTasks))
+//.then(renderTaskEntries)
+//.then(() => API.getTasks()).then((taskToComplete) => {
+
+//renderedTasksDOM.renderTaskEntries(makeTask)})
+//This else if statement may be wrong
+//updateFormFields(taskToComplete)......for ref. all of this "else if statement" is based off of edit entry from my journalentries
