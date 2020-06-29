@@ -8,7 +8,7 @@ API.getAllEvents().then((response) => makeEventList(response));
 //save a new one once all required fields are entered
 const recordEventEntry = document.querySelector(".save__event")
 recordEventEntry.addEventListener("click", event => {
-    const name = document.querySelector(".event__name").value
+    const name = document.querySelector(".event__title").value
     const date = document.querySelector(".event__date").value
     const location = document.querySelector(".event__location").value
 
@@ -25,4 +25,3 @@ recordEventEntry.addEventListener("click", event => {
     }
 })
 
-console.log("Test")

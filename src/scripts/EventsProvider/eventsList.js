@@ -1,6 +1,6 @@
 import API from "./eventsProvider.js"
 import makeEventHTML from "./eventsDOM.js"
-//import registerEventListeners from "./eventsClickEvents.js"
+import registerEventListeners from "./eventsClickEvent.js"
 //render the HTML code into the queried field
 
 const eventContainer = document.querySelector(".postedEvents__Selection");
@@ -16,19 +16,10 @@ const makeEventList = () => {
             eventArray.forEach(item => {
                 eventContainer.innerHTML += makeEventHTML(item);
             });
-         //   registerEventListeners.registerEventListeners();
+           registerEventListeners.registerEventListeners();
         })
 }
 
 
-
-
-//const renderArticleEntries = (articleEntries) => {
-//  for (const entry of articleEntries) {
-//    const articleHTML = makeEventHTML(entry)
-//  const articleElement = document.querySelector(".postedEvents__Selection");
-//articleElement.innerHTML += articleHTML
-//}
-//}
 
 export default makeEventList;
