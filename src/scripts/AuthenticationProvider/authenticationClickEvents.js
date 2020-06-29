@@ -43,34 +43,38 @@ const sessionStorageLogIn = () => {
 }
 
 //Factory Function for creating new user
-
 const makeUser = (user, email, password) => {
-    const newUser = {
+    const newUserTemplate = {
         user: user,
         email: email,
         password: password
     }
-    return newUser;
+    return newUserTemplate;
+    
 }
 
-
 const createAccountButton = document.querySelector("#create-account-button")
-
+// To Do List
 //get values from input fields (consolelog)
 //once you have the input, create newUser object with factory function
 //call the new object 
 const createNewUser = (newUser) => {
     createAccountButton.addEventListener("click", event => {
+        
         const createUsername = document.querySelector("#createUsername").value;
         const createEmail = document.querySelector("#createEmail").value;
         const createPassword = document.querySelector("#createPassword").value;
-        console.log( createUsername, createEmail, createPassword)
-        // API.createUser(username, email, password)
-        //     .then(user => {
-            // localStorage.clear() // If there was a user signed in, this will
-            // localStorage.id = user.id //Then we can store the id we got
-        })
-    
+        const newUserLoginInfo = makeUser(createUsername, createEmail, createPassword)
+        console.log("Created New User!", newUserLoginInfo)
+        // console.log("Username:", createUsername, "Email:", createEmail, "Password:", createPassword)
+        // API.createUser(newUser)
+        //     .then(newUser => {
+        //     localStorage.clear() // If there was a user signed in, this will
+        //     localStorage.id = newUser.id //Then we can store the id we got
+        
+        //     })
+    })
+
 }
 
-export {sessionStorageLogIn, createNewUser}
+export {sessionStorageLogIn, createNewUser, makeUser}

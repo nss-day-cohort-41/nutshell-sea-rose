@@ -6,14 +6,9 @@ const API = {
       .then(response => response.json());
     },
   
-    // getSingleUser: (id) => {
-    // //return fetch(`${url}/users/${id}`)
-    // return fetch(`http://localhost:3000/Users/${id}`)
-	// 	.then(response => response.json());
-	// },
 	createUser: (newUser) => {
 		
-		console.log(username, email, password);
+		console.log(newUser);
 		return fetch("http://localhost:3000/users"), {
 			method: "POST",
 			headers: {
