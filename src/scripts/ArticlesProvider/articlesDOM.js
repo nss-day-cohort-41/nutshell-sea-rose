@@ -4,12 +4,10 @@
 
 const makeArticleHTML = (articleObj) => {
     const domElement = `
-    <h3>Article:</h3>
-    <p class="hideId">${articleObj.id}
-	<p>${articleObj.title}</p>
+    <p class="hideId">${articleObj.id}</p>
+	<h2>${articleObj.title}</h2>
 	<p>${articleObj.synopsis}</p>
-    <p>${articleObj.url}</p>
-   
+    <p><a href="facebook.com">${articleObj.url}</a></p>
     <button id="deleteArticle--${articleObj.id}">Delete</button>
 	
 	`

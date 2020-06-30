@@ -2,11 +2,10 @@
 //written by Jon R.
 const makeEventHTML = (eventObj) => {
     const domElement = `
-    <h3>Event:</h3>
     <p class="hideId">${eventObj.id}</p>
-	<p>${eventObj.name}</p>
-	<p>${eventObj.date}</p>
-    <p>${eventObj.location}</p>
+	<h2>${eventObj.name}</h2>
+	<p><i>Event Date:</i>${eventObj.date}</p>
+    <p><i>Location:<i>${eventObj.location}</p>
     <button id="deleteEvent--${eventObj.id}">Delete</button>
     
 	
