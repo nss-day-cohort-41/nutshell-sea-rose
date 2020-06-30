@@ -15,7 +15,7 @@ const recordUserEntry = document.querySelector(".save__friend")
 recordUserEntry.addEventListener("click", event => {
     event.preventDefault(); //dont refresh page automatically
     const username = document.querySelector(".friend__name").value
-    
+
 
     if (username === "") {
         alert("Please fill out all fields!")
@@ -26,5 +26,14 @@ recordUserEntry.addEventListener("click", event => {
         console.log(newFriend)
         API.saveUserEntry(newFriend)
         API.getAllUsers().then((response) => makeUserList(response));
+    }
+})
+
+document.querySelector(".postedFriends__Selection").addEventListener("click", event => {
+    if (event.target.id.startsWith("deleteUser--")) {
+        const userToDelete = event.target.id.split("--")[1]
+        console.log(userToDelete);
+        API.deleteUser(userToDelete)
+            .then(makeUserList)
     }
 })

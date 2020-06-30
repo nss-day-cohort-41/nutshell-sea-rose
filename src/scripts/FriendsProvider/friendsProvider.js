@@ -13,6 +13,12 @@ const API = {
             },
             body: JSON.stringify(newUserObject)
         }).then(response => response.json());
+    },
+    //delete articles from json
+    deleteUser: (id) => {
+        return fetch(`http://localhost:3000/users/${id}`, {
+            method: "DELETE"
+        }).then(response => response.json());
     }
 }
 export default API; 

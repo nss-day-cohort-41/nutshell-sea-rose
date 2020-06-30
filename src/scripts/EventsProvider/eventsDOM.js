@@ -14,4 +14,4 @@ const makeEventHTML = (eventObj) => {
     return domElement
 }
 
-export default makeEventHTML;
+export default makeEventHTML; 

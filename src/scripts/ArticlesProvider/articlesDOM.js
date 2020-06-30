@@ -1,5 +1,7 @@
 //this will be the code that will convert the article into HTML
 //written by Jon R.
+
+//this is my work in progress for the articles timestamp
 var currentDate = new Date();
 var date = currentDate.getDate();
 var month = currentDate.getMonth();
@@ -7,7 +9,7 @@ var year = currentDate.getFullYear();
 var time = currentDate.toLocaleTimeString();
 
 
-var monthDateYearTime = (month+1) + "/" + date + "/" + year + "/" + time;
+var monthDateYearTime = (month + 1) + "/" + date + "/" + year + "/" + time;
 console.log(monthDateYearTime)
 
 

@@ -2,7 +2,7 @@
 const createUser = (username) => {
     const newUser = {
         "username": username,
-        
+
     };
 
     return newUser;
