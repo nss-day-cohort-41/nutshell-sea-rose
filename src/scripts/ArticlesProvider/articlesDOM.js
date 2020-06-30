@@ -1,21 +1,30 @@
 //this will be the code that will convert the article into HTML
 //written by Jon R.
-const makeArticleHTML = ( articleObj ) => {
-	const domElement = `<div class="">
-	<h3>Article:</h3>
-	<p>${articleObj.id}
-	<p>${articleObj.title}</p>
-	<p>${articleObj.synopsis}</p>
-	<p>${articleObj.url}</p>
+
+//this is my work in progress for the articles timestamp
+var currentDate = new Date();
+var date = currentDate.getDate();
+var month = currentDate.getMonth();
+var year = currentDate.getFullYear();
+var time = currentDate.toLocaleTimeString();
+
+
+var monthDateYearTime = (month + 1) + "/" + date + "/" + year + "/" + time;
+console.log(monthDateYearTime)
+
+
+const makeArticleHTML = (articleObj) => {
+	const domElement = `
+	<div class="article__card>
+    <p class="hideId">${articleObj.id}</p>
+	<h2>${articleObj.title}</h2>
+    <p>${articleObj.synopsis}</p>
+    <p>${monthDateYearTime}</p>
+    <p><a href="facebook.com">${articleObj.url}</a></p>
+    <button id="deleteArticle--${articleObj.id}">Delete</button>
 	</div>
-	<button class="anything" id="deleteArticle--${articleObj.id}">
-	Delete Article
-	</button>
-	<button class="edit" id="editArticle--${articleObj.id}">
-	Edit Article
-	</button>
 	`
-	return domElement
+    return domElement
 }
 
 export default makeArticleHTML;

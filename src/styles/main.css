@@ -1,3 +1,12 @@
-/*.hide {
-    display: none;
+@import "events.css";
+@import "articles.css";
+@import "friends.css";
+
+body {
+    background-color: darkslategray;
+}
+
+.friend__container {
+    display: flex;
+    flex-direction: row;
 }

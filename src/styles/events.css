@@ -1,0 +1,12 @@
+  
+.hideId {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.event__card {
+    background-color: wheat
+}
