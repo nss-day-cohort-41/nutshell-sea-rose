@@ -16,7 +16,9 @@ const makeEventList = () => {
             eventArray.forEach(item => {
                 eventContainer.innerHTML += makeEventHTML(item);
             });
-           registerEventListeners.registerEventListeners();
+          // registerEventListeners.registerEventListeners();
+        }).then(() => {
+            registerEventListeners.registerEventListeners();
         })
 }
 

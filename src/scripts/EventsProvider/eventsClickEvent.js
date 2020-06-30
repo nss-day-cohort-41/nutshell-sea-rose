@@ -9,6 +9,7 @@ export default {
     registerEventListeners() {
         //the click even for deleting an article object
         eventContainer.addEventListener("click", event => {
+            event.preventDefault();
             console.log("test", event.target.id);
             if (event.target.id.startsWith("deleteEvent--")) {
                 const eventToDelete = event.target.id.split("--")[1];

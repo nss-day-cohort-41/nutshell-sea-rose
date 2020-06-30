@@ -1,6 +1,7 @@
 //code written by JR to add functionality to the "New Article" button.
-import makeArticleList from "./articlesList.js"
 import API from "./articlesProvider.js";
+import renderArticleEntries from "./articlesList.js"
+
 
 //where the action is happening in the index
 const articleContainer = document.querySelector(".postedNews__Selection");
@@ -15,7 +16,8 @@ export default {
                 console.log(articleToDelete);
 
                 API.deleteArticle(articleToDelete)
-                    .then(makeArticleList)
+                    .then((API.getAllArticles))
+                    .then(renderArticleEntries)
             }
         })
         //playing around with trying to get the timestamp

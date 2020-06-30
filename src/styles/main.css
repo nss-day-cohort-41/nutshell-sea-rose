@@ -1,3 +1,7 @@
 .hideId {
     visibility: hidden;
 }
+
+.eventCard {
+    background-color: aquamarine;
+}

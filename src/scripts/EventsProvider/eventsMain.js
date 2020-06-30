@@ -8,6 +8,7 @@ API.getAllEvents().then((response) => makeEventList(response));
 //save a new one once all required fields are entered
 const recordEventEntry = document.querySelector(".save__event")
 recordEventEntry.addEventListener("click", event => {
+    event.preventDefault(); //dont refresh page automatically
     const name = document.querySelector(".event__title").value
     const date = document.querySelector(".event__date").value
     const location = document.querySelector(".event__location").value
@@ -20,7 +21,8 @@ recordEventEntry.addEventListener("click", event => {
         let newEvent = createEventEntry(name, date, location)
         console.log(newEvent)
         API.saveEventEntry(newEvent)//.then(() => {
-        API.getAllEvents().then((response) => makeEventList(response));
+        API.getAllEvents()//.then((response) => makeEventList(response));
+        //console.log("it's freaking out")
         //})
     }
 })
