@@ -1,7 +1,2 @@
-.hideId {
-    visibility: hidden;
-}
-
-.hidden {
-    display: none;
-}
+@import "events.css";
+@import "articles.css"
