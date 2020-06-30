@@ -20,9 +20,8 @@
             <input id="loginUsername" name="loginUsername" type="text" required minlength="3" maxlength="15">
             <label for="loginPassword">Password:</label>
             <input id="loginPassword" name="loginPassword" type="password" required minlength="3" maxlength="15">
-           </form> 
+        </form> 
             <button id="loginButton">Sign In</button>
-            <button id="signout-button" type="button" value="Sign Out">Sign Out</button>
         <form autocomplete="on">
             <h1>Create Account</h1>
             <label for="createUsername">Username:</label>
@@ -113,10 +112,19 @@
             </div>
             <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
             <div class="underHeader__Right">
-                <section class="userWithChat___Container">
-                    <section class="chat__Container">
+                <section class="chat___Container">
+                    <section class="chat__Box">
                     </section>
-                    <article class="userMessage__bottomSelection">
+                    <article class="newMessage__Container">
+                        <form id="message__Form" action="">
+                            <!-- hidden input field -->
+                            <input type="hidden" id="messageId" value="" />
+                            <fieldset>
+                                <label for="chat__Message">Chat:</label>
+                                <textarea placeholder="Your Message Here..." name="newMessage" class="input__field" id="newMessage" cols="40" rows="2"></textarea>
+                            </fieldset>
+                            <button type="submit" id="sendMessageButton">Send Message</button>
+                        </form>    
                     </article>
                 </section>
             </div>
