@@ -1,6 +1,5 @@
 import API from "./eventsProvider.js"
 import makeEventList from "./eventsList.js"
-//import newEventButton from "./eventsClickEvents.js"
 import createEventEntry from "./eventsFactory.js"
 
 //render the original list into the browser
@@ -20,10 +19,8 @@ recordEventEntry.addEventListener("click", event => {
         //if all fields are filled out will create a new article object
         let newEvent = createEventEntry(name, date, location)
         console.log(newEvent)
-        API.saveEventEntry(newEvent)//.then(() => {
-        API.getAllEvents()//.then((response) => makeEventList(response));
-        //console.log("it's freaking out")
-        //})
+        API.saveEventEntry(newEvent)
+        API.getAllEvents().then((response) => makeEventList(response));
     }
 })
 
@@ -32,6 +29,6 @@ document.querySelector(".postedEvents__Selection").addEventListener("click", eve
         const eventToDelete = event.target.id.split("--")[1]
         console.log(eventToDelete);
         API.deleteEvent(eventToDelete)
-        .then(makeEventList)
+            .then(makeEventList)
     }
 })

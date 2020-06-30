@@ -16,19 +16,9 @@ const makeArticleList = () => {
             articleArray.forEach(item => {
                 articleContainer.innerHTML += makeArticleHTML(item);
             });
-            /*registerListeners.registerListeners();
+
         })
 }
-*/
 
-        })}
-
-//const renderArticleEntries = (articleEntries) => {
-//  for (const entry of articleEntries) {
-//    const articleHTML = makeArticleHTML(entry)
-//  const articleElement = document.querySelector(".postedNews__Selection");
-//articleElement.innerHTML += articleHTML
-//}
-//}
 
 export default makeArticleList;

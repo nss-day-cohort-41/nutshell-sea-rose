@@ -1,14 +1,12 @@
 //code written by JR. Functionality is to fetch sample data from json server
 
 const API = {
-    //allArticles: [],
-    //get articles from json
-    getAllArticles () {
+
+    getAllArticles() {
         return fetch("http://localhost:3000/articles")
-            .then(response => response.json())//.then((articlesArray) => {
-                //API.allArticles = articlesArray;
-            },//)
-    
+            .then(response => response.json())
+    },
+
     //save and send new articles to json
     saveArticleEntry: (newEntryObject) => {
         return fetch("http://localhost:3000/articles", {
@@ -16,20 +14,17 @@ const API = {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newEntryObject) 
+            body: JSON.stringify(newEntryObject)
         }).then(response => response.json());
-            
-           // renderedArticlesDOM.renderArticleEntries(response)
-        //})
+
     },
     //delete articles from json
-    deleteArticle (id)  {
+    deleteArticle(id) {
         return fetch(`http://localhost:3000/articles/${id}`, {
             method: "DELETE"
-        })//.then(() => API.getAllArticles()).then((response) => {
-        .then(response => response.json())
-            //renderedArticlesDOM.renderArticleEntries(response)
-        //})
+        })
+            .then(response => response.json())
+
     }
 }
 
