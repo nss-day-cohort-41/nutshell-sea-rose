@@ -1,19 +1,16 @@
 import API from "./articlesProvider.js"
-import renderArticleEntries from "./articlesList.js"
+import makeArticleList from "./articlesList.js"
 //import registerListeners from "./articlesClickEvents.js"
 import createArticleEntry from "./articlesFactory.js"
 
-//API.getAllArticles()
-//.then(() => renderArticleEntries.renderArticleEntries());
-renderArticleEntries.makeDOM()
-
-
-//document.querySelector(".postedNews__Selection")
-document.querySelector(".save__article").addEventListener("click", event => {
-    let title = document.querySelector(".news__title").value;
-    let synopsis = document.querySelector(".news__synopsis").value;
-    let url = document.querySelector(".news__url").value;
-
+//render the original list into the browser
+API.getAllArticles().then((response) => makeArticleList(response));
+//save a new one once all required fields are entered
+const recordArticleEntry = document.querySelector(".save__article")
+recordArticleEntry.addEventListener("click", event => {
+    const title = document.querySelector(".news__title").value
+    const synopsis = document.querySelector(".news__synopsis").value
+    const url = document.querySelector(".news__url").value
     if (title === "" || synopsis === "" || url === "") {
         alert("Please fill out all fields!")
 
@@ -21,9 +18,9 @@ document.querySelector(".save__article").addEventListener("click", event => {
         //if all fields are filled out will create a new article object
         let newArticle = createArticleEntry(title, synopsis, url)
         console.log(newArticle)
-        API.saveArticleEntry(newArticle).then(() => {
-        API.getAllArticles()//.then((response) => renderArticleEntries(response));
-        })
+        API.saveArticleEntry(newArticle)//.then(() => {
+        API.getAllArticles()//.then((response) => makeArticleList(response));
+      //  })
     }
 })
 
@@ -33,7 +30,7 @@ document.querySelector(".postedNews__Selection").addEventListener("click", event
         const articleToDelete = event.target.id.split("--")[1]
         console.log(articleToDelete);
         API.deleteArticle(articleToDelete)
-        .then(renderArticleEntries.makeDOM)
+        .then(makeArticleList)
     }
 })
 

@@ -8,6 +8,7 @@ const makeEventHTML = (eventObj) => {
 	<p>${eventObj.date}</p>
     <p>${eventObj.location}</p>
     <button id="deleteEvent--${eventObj.id}">Delete</button>
+    
 	
 	`
     return domElement

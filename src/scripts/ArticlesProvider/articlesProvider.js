@@ -1,8 +1,5 @@
 //code written by JR. Functionality is to fetch sample data from json server
 
-import renderedArticlesDOM from "./articlesList.js"
-import createArticleEntry from "./articlesFactory.js"
-
 const API = {
     //allArticles: [],
     //get articles from json
@@ -20,7 +17,7 @@ const API = {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(newEntryObject) 
-        });//.then(() => API.getAllArticles()).then((response) => {
+        }).then(response => response.json());
             
            // renderedArticlesDOM.renderArticleEntries(response)
         //})
