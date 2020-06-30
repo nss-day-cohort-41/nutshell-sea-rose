@@ -38,3 +38,4 @@ const eventFormVisibilityButton = document.querySelector("#toggle__events")
 eventFormVisibilityButton.addEventListener("click", (clickEvent) => {
     document.querySelector(".newEvent__form").classList.toggle("hidden")
 })
+
