@@ -1,6 +1,8 @@
-import {sessionStorageLogIn, createNewUser, makeUser} from "./AuthenticationProvider/authenticationClickEvents.js"
-// import API from "./authenticationProvider.js"
+import {sessionStorageLogIn, createNewUser} from "./AuthenticationProvider/authenticationClickEvents.js"
+import postMessage from "./ChatsProvider/chatsClickEvent.js"
 
 sessionStorageLogIn();
 
 createNewUser()
+
+postMessage()
