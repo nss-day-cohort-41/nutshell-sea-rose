@@ -13,18 +13,25 @@ const sessionStorageLogIn = () => {
     submitLoginButton.addEventListener('click', event => {
         API.getAllUsers()
             .then(userArray => {
+                // loops over user array with find to find the user target by what the user entered.
                 let user = userArray.find((user) => {
-
                     // Validation for password and username
-                    if (passwordLogin.value === user.password && user.user === userLogin.value) {
+                    if (passwordLogin.value === user.password && user.email === userLogin.value) {
+                        console.log(user.user)
                         return user.user
                     }
                 })
+                if (typeof (user) == "undefined") {
+                    alert("Broken Baby!")
 
-                // We decided to use a key value pairs for our session storage.
-                sessionStorage.id = user.id
-                sessionStorage.user = user.user
-                console.log(sessionStorage)
+                } else {
+
+                    // We decided to use a key value pairs for our session storage.
+                    sessionStorage.id = user.id
+                    sessionStorage.user = user.user
+                    sessionStorage.email = user.email
+                    console.log(sessionStorage)
+                }
 
             })
     })
@@ -42,10 +49,7 @@ const makeUser = (user, email, password) => {
 }
 
 const createAccountButton = document.querySelector("#create-account-button");
-// To Do List
-//get values from input fields (consolelog)
-//once you have the input, create newUser object with factory function
-//call the new object 
+
 const createNewUser = () => {
     createAccountButton.addEventListener("click", event => {
 
@@ -56,12 +60,12 @@ const createNewUser = () => {
         console.log("Created New User!", newUserLoginInfo)
 
         API.createUser(newUserLoginInfo)
-        .then(user => {
-            sessionStorage.clear();
-            sessionStorage.id = user.id
-            sessionStorage.user = user.user
-            console.log(localStorage.id)
-        })
+            .then(user => {
+                sessionStorage.clear();
+                sessionStorage.id = user.id
+                sessionStorage.user = user.user
+                console.log(localStorage.id)
+            })
 
     })
 }
