@@ -56,16 +56,23 @@ const createNewUser = () => {
         const createUsername = document.querySelector("#createUsername").value;
         const createEmail = document.querySelector("#createEmail").value;
         const createPassword = document.querySelector("#createPassword").value;
+        const reInputPassword = document.querySelector("#reInputPassword").value;
         const newUserLoginInfo = makeUser(createUsername, createEmail, createPassword);
-        console.log("Created New User!", newUserLoginInfo)
 
-        API.createUser(newUserLoginInfo)
-            .then(user => {
-                sessionStorage.clear();
-                sessionStorage.id = user.id
-                sessionStorage.user = user.user
-                console.log(localStorage.id)
-            })
+        if (createPassword !== reInputPassword) {
+            alert("Passwords Do not match")
+    
+        } else {
+            API.createUser(newUserLoginInfo)
+                .then(user => {
+                    sessionStorage.clear();
+                    sessionStorage.id = user.id
+                    sessionStorage.email = user.email
+                    sessionStorage.user = user.user
+                    console.log(localStorage.id)
+                })
+        }
+
 
     })
 }
