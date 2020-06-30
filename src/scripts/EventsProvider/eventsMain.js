@@ -27,3 +27,11 @@ recordEventEntry.addEventListener("click", event => {
     }
 })
 
+document.querySelector(".postedEvents__Selection").addEventListener("click", event => {
+    if (event.target.id.startsWith("deleteEvent--")) {
+        const eventToDelete = event.target.id.split("--")[1]
+        console.log(eventToDelete);
+        API.deleteEvent(eventToDelete)
+        .then(makeEventList)
+    }
+})
