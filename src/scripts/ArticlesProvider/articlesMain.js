@@ -31,3 +31,10 @@ document.querySelector(".postedNews__Selection").addEventListener("click", event
             .then(makeArticleList)
     }
 })
+
+
+const articleFormVisibilityButton = document.querySelector("#toggle__articles")
+
+articleFormVisibilityButton.addEventListener("click", (clickEvent) => {
+    document.querySelector(".newArticle__form").classList.toggle("hidden")
+})

@@ -2,6 +2,6 @@
     visibility: hidden;
 }
 
-.eventCard {
-    background-color: aquamarine;
+.hidden {
+    display: none;
 }
