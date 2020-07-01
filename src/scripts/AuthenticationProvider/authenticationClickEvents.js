@@ -60,20 +60,21 @@ const createNewUser = () => {
         // Creating object with Factory function
         const newUserLoginInfo = makeUser(createUsername, createEmail, createPassword);
 
-        // If the password does not exist it will alert the user. Other wise 
         API.getAllUsers()
             .then(userArray => {
+                // Checking JSON for similar input and JSON in the database.
                 const accountCheck = userArray.some(accounts => accounts.email === createEmail)
-                console.log(accountCheck)
+                // If user email is already in the JSON then an error will be reported
                 if (accountCheck) {
                     alert("Email is Already Taken")
                 } else if (createPassword !== reInputPassword) {
                     alert("Passwords Do not match")
 
                 } else {
+                    document.querySelector(".underHeader").classList.toggle("hidden")
+                    document.querySelector(".registerForm").classList.toggle("hidden")
                     API.createUser(newUserLoginInfo)
                         .then(user => {
-
                             sessionStorage.clear();
                             sessionStorage.id = user.id
                             sessionStorage.email = user.email
@@ -89,6 +90,14 @@ const createNewUser = () => {
 const registerationFormButton = document.querySelector("#registerButton")
 
 registerationFormButton.addEventListener("click", (clickEvent) => {
+    document.querySelector(".registerForm").classList.toggle("hidden")
+    document.querySelector(".loginContainer").classList.toggle("hidden")
+})
+
+//toggle for the form visibility of Login
+const loginFormButton = document.querySelector("#returnToLogin")
+
+loginFormButton.addEventListener("click", (clickEvent) => {
     document.querySelector(".registerForm").classList.toggle("hidden")
     document.querySelector(".loginContainer").classList.toggle("hidden")
 })
