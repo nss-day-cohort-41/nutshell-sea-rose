@@ -1,22 +1,22 @@
   //code written by JR. Functionality is to fetch sample data from json server
   const API = {
       //get articles from json
-      getAllUsers: () => {
-          return fetch("http://localhost:3000/users")
+      getAllFriends: () => {
+          return fetch("http://localhost:3000/friends")
               .then(response => response.json());
       },
-      saveUserEntry: (newUserObject) => {
-          return fetch("http://localhost:3000/users", {
+      saveFriendEntry: (newFriendObject) => {
+          return fetch("http://localhost:3000/friends", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
               },
-              body: JSON.stringify(newUserObject)
+              body: JSON.stringify(newFriendObject)
           }).then(response => response.json());
       },
       //delete articles from json
-      deleteUser: (id) => {
-          return fetch(`http://localhost:3000/users/${id}`, {
+      deleteFriend: (id) => {
+          return fetch(`http://localhost:3000/friends/${id}`, {
               method: "DELETE"
           }).then(response => response.json());
       }

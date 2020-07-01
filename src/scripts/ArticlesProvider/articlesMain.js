@@ -13,6 +13,7 @@ recordArticleEntry.addEventListener("click", event => {
     let timeStamp = new Date();
     const time = timeStamp.toTimeString(); //can use toDateString instead for MM/DD/YY fmt
     //Date.now();  // just Date() gives me a more readable albeit inaccurate timestamp
+    
     if (title === "" || synopsis === "" || url === "") {
         alert("Please fill out all fields!")
 
@@ -21,6 +22,7 @@ recordArticleEntry.addEventListener("click", event => {
         let newArticle = createArticleEntry(title, synopsis, url, time)
         console.log(newArticle)
         API.saveArticleEntry(newArticle)
+        //API.getUserId();
         API.getAllArticles().then((response) => makeArticleList(response));
     }
 })
