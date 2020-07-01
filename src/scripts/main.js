@@ -3,6 +3,8 @@ import postMessage from "./ChatsProvider/chatsClickEvent.js"
 import makeMessageList from "./ChatsProvider/chatsList.js"
 sessionStorageLogIn();
 
-createNewUser()
+createNewUser();
 
-makeMessageList()
+postMessage();
+
+makeMessageList();  
