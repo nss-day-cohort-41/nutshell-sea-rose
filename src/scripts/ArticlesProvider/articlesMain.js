@@ -10,7 +10,8 @@ recordArticleEntry.addEventListener("click", event => {
     const title = document.querySelector(".news__title").value
     const synopsis = document.querySelector(".news__synopsis").value
     const url = document.querySelector(".news__url").value
-    const time = new Date();
+    let timeStamp = new Date();
+    const time = timeStamp.toDateString();//Date.now();  // just Date() gives me a more readable albeit inaccurate timestamp
     if (title === "" || synopsis === "" || url === "") {
         alert("Please fill out all fields!")
 
