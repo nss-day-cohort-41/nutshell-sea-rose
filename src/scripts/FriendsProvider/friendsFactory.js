@@ -1,11 +1,11 @@
   //JR - function that will allow user to create a new article entry with defined parameters
-  const createUser = (username) => {
-      const newUser = {
+  const createFriend = (username) => {
+      const newFriend = {
           "username": username,
 
       };
 
-      return newUser;
+      return newFriend;
   };
 
-  export default createUser;
+  export default createFriend;

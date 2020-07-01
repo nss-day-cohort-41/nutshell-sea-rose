@@ -1,6 +1,6 @@
-  import makeUserList from "./friendsList.js"
+  import makeFriendList from "./friendsList.js"
   import API from "./friendsProvider.js"
-  import createUser from "./friendsFactory.js"
+  import createFriend from "./friendsFactory.js"
 
   const friendFormVisibility = document.querySelector("#toggle__friends")
 
@@ -8,11 +8,11 @@
       document.querySelector(".newFriend__form").classList.toggle("hidden")
   })
 
-  API.getAllUsers().then((response) => makeUserList(response));
+  API.getAllFriends().then((response) => makeFriendList(response));
 
   //save a new one once all required fields are entered
-  const recordUserEntry = document.querySelector(".save__friend")
-  recordUserEntry.addEventListener("click", event => {
+  const recordFriendEntry = document.querySelector(".save__friend")
+  recordFriendEntry.addEventListener("click", event => {
       event.preventDefault(); //dont refresh page automatically
       const username = document.querySelector(".friend__name").value
 
@@ -22,18 +22,18 @@
 
       } else {
           //if all fields are filled out will create a new article object
-          let newFriend = createUser(username)
+          let newFriend = createFriend(username)
           console.log(newFriend)
-          API.saveUserEntry(newFriend)
-          API.getAllUsers().then((response) => makeUserList(response));
+          API.saveFriendEntry(newFriend)
+          API.getAllFriends().then((response) => makeFriendList(response));
       }
   })
 
   document.querySelector(".postedFriends__Selection").addEventListener("click", event => {
       if (event.target.id.startsWith("deleteUser--")) {
-          const userToDelete = event.target.id.split("--")[1]
-          console.log(userToDelete);
-          API.deleteUser(userToDelete)
-              .then(makeUserList)
+          const friendToDelete = event.target.id.split("--")[1]
+          console.log(friendToDelete);
+          API.deleteFriend(friendToDelete)
+              .then(makeFriendList)
       }
   })
