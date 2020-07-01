@@ -13,21 +13,24 @@
 </head>
 <body>
     <section class="loginContainer">
+        <!-- To late in the game to change. -->
         <!--The Sign in and Registration area-->
         <section class= "loginForm"></section>
-            <h3>Sign In</h3>
-            <form>
+            <form class="loginFormSection">
+                <h3>Sign In</h3>
                 <label for="loginUsername">Email:</label>
                 <input id="loginUsername" name="loginUsername" type="text" required minlength="3" maxlength="15">
                 <label for="loginPassword">Password:</label>
                 <input id="loginPassword" name="loginPassword" type="password" required minlength="3" maxlength="15">
             </form>
-            <button id="loginButton">Sign In</button>
-            <button id="registerButton">Register</button>
+            <div class="loginButtonArea">
+                <button id="loginButton">Sign In</button>
+                <button id="registerButton">Register</button>
+            </div>
          </section>
         
         <section class="registerForm hidden">
-            <form>
+            <form class="registerFormSection">
                 <h3>Create Account</h3>
                 <label for="email">Email:</label>
                 <input id="createEmail" name="email" type="email">
@@ -38,8 +41,10 @@
                 <label for="reInputPassword">Reinput Password:</label>
                 <input id="reInputPassword" name="reInputPassword" type="password" required minlength="3" maxlength="15">
             </form>
-            <button id="create-account-button" type="submit" value="Create Account">Create Account</button>
-            <button id="returnToLogin" type="submit" value="Create Account">Return to Login</button>
+            <div class="registrationButtonArea">
+                <button id="create-account-button" type="submit" value="Create Account">Create Account</button>
+                <button id="returnToLogin" type="submit" value="Create Account">Return to Login</button>
+            </div>
         </section>
     </section>
 
