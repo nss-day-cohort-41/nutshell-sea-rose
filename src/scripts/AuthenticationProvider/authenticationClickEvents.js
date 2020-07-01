@@ -22,6 +22,9 @@ const sessionStorageLogIn = () => {
                     alert("Username or Password are Wrong")
 
                 } else {
+                    //toggle for the page visibility
+                    document.querySelector(".underHeader").classList.toggle("hidden")
+                    document.querySelector(".loginContainer").classList.toggle("hidden")
                     // We decided to use a key value pairs for our session storage.
                     sessionStorage.id = user.id
                     sessionStorage.user = user.user
@@ -59,26 +62,26 @@ const createNewUser = () => {
 
         // If the password does not exist it will alert the user. Other wise 
         API.getAllUsers()
-        .then(userArray => {
-            const accountCheck = userArray.some(accounts => accounts.email === createEmail )
-            console.log(accountCheck)
-            if(accountCheck) {
-                alert("Email is Already Taken")
-            } else if (createPassword !== reInputPassword) {
-                alert("Passwords Do not match")
-        
-            } else {
-                API.createUser(newUserLoginInfo)
-                    .then(user => {
-                        
-                        sessionStorage.clear();
-                        sessionStorage.id = user.id
-                        sessionStorage.email = user.email
-                        sessionStorage.user = user.user
-                    })
-            }
-        })
-    
+            .then(userArray => {
+                const accountCheck = userArray.some(accounts => accounts.email === createEmail)
+                console.log(accountCheck)
+                if (accountCheck) {
+                    alert("Email is Already Taken")
+                } else if (createPassword !== reInputPassword) {
+                    alert("Passwords Do not match")
+
+                } else {
+                    API.createUser(newUserLoginInfo)
+                        .then(user => {
+
+                            sessionStorage.clear();
+                            sessionStorage.id = user.id
+                            sessionStorage.email = user.email
+                            sessionStorage.user = user.user
+                        })
+                }
+            })
+
     })
 }
 
