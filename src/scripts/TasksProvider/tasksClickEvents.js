@@ -51,6 +51,15 @@ export default {
 						});
 				}
 			})
+/* 
+			const HideTaskButton = document.querySelector(".toggleTasks")
+
+			HideTaskButton.addEventListener("click", clickEvent => {
+				document.querySelector(".tipList").classList.toggle("hidden")
+			})
+			 */
+
+
 			const clearInputs = () => {
 
 				document.querySelector("#taskTitle").value = "";
@@ -58,5 +67,6 @@ export default {
 				document.querySelector("#expectedCompletionDate").value = "";
 			  
 			  }	}
+			  
 		
 }
