@@ -1,7 +1,12 @@
-.hideId {
-    visibility: hidden;
+@import "events.css";
+@import "articles.css";
+@import "friends.css";
+
+body {
+    background-color: darkslategray;
 }
 
-.eventCard {
-    background-color: aquamarine;
+.friend__container {
+    display: flex;
+    flex-direction: row;
 }
