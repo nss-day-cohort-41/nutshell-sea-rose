@@ -17,7 +17,7 @@ const sessionStorageLogIn = () => {
                         return user.user
                     }
                 })
-
+                // Validates if the information is being returned for user
                 if (typeof (user) == "undefined") {
                     alert("Username or Password are Wrong")
 
@@ -84,5 +84,13 @@ const createNewUser = () => {
 
     })
 }
+
+//toggle for the form visibility of registration
+const registerationFormButton = document.querySelector("#registerButton")
+
+registerationFormButton.addEventListener("click", (clickEvent) => {
+    document.querySelector(".registerForm").classList.toggle("hidden")
+    document.querySelector(".loginContainer").classList.toggle("hidden")
+})
 
 export { sessionStorageLogIn, createNewUser, makeUser }
