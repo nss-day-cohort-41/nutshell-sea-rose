@@ -15,12 +15,12 @@ console.log(monthDateYearTime)
 
 const makeArticleHTML = (articleObj) => {
 	const domElement = `
-	<div class="article__card>
+	<div class="article__card">
     <p class="hideId">${articleObj.id}</p>
 	<h2>${articleObj.title}</h2>
     <p>${articleObj.synopsis}</p>
     <p>${monthDateYearTime}</p>
-    <p><a href="facebook.com">${articleObj.url}</a></p>
+    <p><a href="">${articleObj.url}</a></p>
     <button id="deleteArticle--${articleObj.id}">Delete</button>
 	</div>
 	`
