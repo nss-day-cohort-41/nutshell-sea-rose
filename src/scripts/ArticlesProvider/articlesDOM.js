@@ -24,7 +24,7 @@ const makeArticleHTML = (articleObj) => {
     <button id="deleteArticle--${articleObj.id}">Delete</button>
 	</div>
 	`
-    return domElement
+	return domElement
 }
 
 export default makeArticleHTML;

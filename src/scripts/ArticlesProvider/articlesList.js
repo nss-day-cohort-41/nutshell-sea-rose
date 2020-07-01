@@ -14,14 +14,14 @@ const makeArticleList = () => {
                 return htmlComponent;
             });
             //maybe try sort here for date based presentation
-                articleArray.sort((a, b) => {
-                    if (a.time > b.time) return -1;
-                    if (a.time < b.time) return -1;
-                    return 0;
-                })
+            articleArray.sort((a, b) => {
+                if (a.time > b.time) return -1;
+                if (a.time < b.time) return -1;
+                return 0;
+            })
             articleArray.forEach(item => {
                 articleContainer.innerHTML += makeArticleHTML(item);
-                
+
             });
 
         })

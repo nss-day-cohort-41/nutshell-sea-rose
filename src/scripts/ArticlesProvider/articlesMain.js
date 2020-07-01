@@ -11,7 +11,7 @@ recordArticleEntry.addEventListener("click", event => {
     const synopsis = document.querySelector(".news__synopsis").value
     const url = document.querySelector(".news__url").value
     let timeStamp = new Date();
-    const time = timeStamp.toTimeString();//can use toDateString instead for MM/DD/YY fmt
+    const time = timeStamp.toTimeString(); //can use toDateString instead for MM/DD/YY fmt
     //Date.now();  // just Date() gives me a more readable albeit inaccurate timestamp
     if (title === "" || synopsis === "" || url === "") {
         alert("Please fill out all fields!")
