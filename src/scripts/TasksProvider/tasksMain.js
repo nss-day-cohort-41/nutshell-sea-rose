@@ -20,42 +20,42 @@ document.querySelector("#taskSave")
     let taskTitle = document.querySelector("#taskTitle").value;
     let taskName = document.querySelector("#taskName").value;
     let expectedCompletionDate = document.querySelector("#expectedCompletionDate").value;
-    //GRAVEYARD: let complete = document.querySelector("#complete");
+
 
     if (taskTitle !== "" && taskName !== "" && expectedCompletionDate !== "") {
       let createdTaskEntry = makeTask(taskTitle, taskName, expectedCompletionDate)
       API.addTask(createdTaskEntry)
       clearInputs();
-      
+
     }
 
     else { alert("Please fill out all required inputs to create a 'Task' entry") }
-    //GRAVEYARD: && complete !== ""
+
   })
- const clearInputs=()=>{
-  //document.querySelector("#hiddenEntryForm").value = "";
-  document.querySelector("#taskTitle").value= "";
+const clearInputs = () => {
+
+  document.querySelector("#taskTitle").value = "";
   document.querySelector("#taskName").value = "";
   document.querySelector("#expectedCompletionDate").value = "";
-//GRAVEYARD:document.querySelector("#complete").value = "";
- }
+
+}
 
 
 
 
 
-//registerListeners.registerListeners();
+
 
 
 
 //ORIGINAL EDIT PROCESS BELOW--->Mimics utilizing the original input fields as editors:
- // This is where I have begun the eventlistening process for the complete/edit feature. Currently I am targetting an incorrect field
+// This is where I have begun the eventlistening process for the complete/edit feature. Currently I am targetting an incorrect field
 const completeTask = document.querySelector("#taskEdit")
 completeTask.addEventListener("click", event => {
   console.log("yeet")
 
 
-  //GRAVEYARD: const hiddenTaskFormId = document.querySelector("#hiddenTaskFormId");
+
 
   if (hiddenTaskFormId.value !== "") {
 
@@ -67,23 +67,23 @@ completeTask.addEventListener("click", event => {
 
 
     API.completeTask(hiddenTaskFormId.value, makeTask(taskTitleInput.value, taskNameInput.value, expectedCompletionDateInput.value))
-      .then(()=> {
+      .then(() => {
         return API.getTasks()
-         }).then((response)=>{
+      }).then((response) => {
         clearInputs();
         renderedTasksDOM.renderTaskEntries(response)
-        
+
       });
   }
 
   else {
     const createdTaskEntry = makeTask(taskTitleInput, taskNameInput, expectedCompletionDateInput)
     API.addTask(createdTaskEntry)
-    
+
     console.log("should be able to see the save a new one functionality");
   }
 
-}); 
+});
 
 
 
