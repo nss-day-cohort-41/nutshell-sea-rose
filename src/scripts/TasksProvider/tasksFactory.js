@@ -3,13 +3,14 @@
 
 
 
-const makeTask = (taskTitle, taskName, expectedCompletionDate) => {
+const makeTask = ( taskTitle, taskName, expectedCompletionDate, completeStatus) => {
 	const taskObj = {
         
+           
         taskTitle: taskTitle,
         taskName: taskName,
-        expectedCompletionDate: expectedCompletionDate
-        
+        expectedCompletionDate: expectedCompletionDate,
+        completeStatus: false
 	}
 
 	return taskObj;
@@ -19,4 +20,5 @@ export default makeTask;
 
 
 //GRAVEYEARD BELOW:
-//complete: complete
+
+// userId: userId.sessionStorage?, 

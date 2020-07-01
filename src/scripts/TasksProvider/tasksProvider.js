@@ -28,10 +28,10 @@ const API = {
                 renderedTasksDOM.renderTaskEntries(response)
         })
     },
-        /*     getSingleTask: (id) => {
-		return fetch(`${url}/Tasks/${id}`)
+    getSingleTask: (id) => {
+		return fetch(`http://localhost:5055/Tasks/${id}`)
 		.then(response => response.json());
-	}, */
+	}, 
 
 //Because POST is default I should be able to take out headers and body.json.
 //Trying my hand at the delete properties
@@ -52,13 +52,13 @@ const API = {
             },
             body: JSON.stringify(makeTask)   
         })
-        .then(() => API.getTasks()).then(() => {
+        .then(() => API.getTasks()).then(() => 
+        { renderedTasksDOM.renderTaskEntries()
 
-            renderedTasksDOM.renderTaskEntries()})
-    } 
-    
+       }) 
+        //commented out for testing 
 
-
+    }
 }
 
 export default API;
