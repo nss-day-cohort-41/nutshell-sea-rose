@@ -51,5 +51,12 @@ export default {
 						});
 				}
 			})
-		}
+			const clearInputs = () => {
+
+				document.querySelector("#taskTitle").value = "";
+				document.querySelector("#taskName").value = "";
+				document.querySelector("#expectedCompletionDate").value = "";
+			  
+			  }	}
+		
 }

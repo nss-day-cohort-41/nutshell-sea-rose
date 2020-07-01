@@ -50,7 +50,7 @@ const clearInputs = () => {
 
 //ORIGINAL EDIT PROCESS BELOW--->Mimics utilizing the original input fields as editors:
 // This is where I have begun the eventlistening process for the complete/edit feature. Currently I am targetting an incorrect field
-const completeTask = document.querySelector("#SaveChanges")
+/* const completeTask = document.querySelector("#SaveChanges")
 completeTask.addEventListener("click", event => {
   console.log("yeet")
 
@@ -84,7 +84,7 @@ completeTask.addEventListener("click", event => {
   }
 
 });
-
+ */
 
 
 
