@@ -5,7 +5,8 @@ const createArticleEntry = (title, synopsis, url, time) => {
     "synopsis": synopsis,
     "url": url,
     //I can pass the time here into the database but not sure how to filter or to make it readable
-    "time": time
+    "time": time,
+    
   };
 
   return articleObj;

@@ -9,12 +9,21 @@ const makeEventList = () => {
     eventContainer.innerHTML = "";
     API.getAllEvents()
         .then((eventArray) => {
-            const allEvents = eventArray.map(item => {
+           const allEvents = eventArray.map(item => {
                 const htmlComponent = `<p>${item.title}</p>`
                 return htmlComponent;
+           });
+            //const firstEvent = eventArray.find(item => {
+                
+               // eventContainer.innerHTML += makeEventHTML(item);
+            //});
+            eventArray.sort((a, b) => {
+                if (a.date > b.date) return -1;
+                if (a.date < b.date) return -1;
+                return 0;
             });
-            eventArray.forEach(item => {
-                eventContainer.innerHTML += makeEventHTML(item);
+           eventArray.forEach(item => {
+               eventContainer.innerHTML += makeEventHTML(item);
             });
 
         })
