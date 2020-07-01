@@ -1,24 +1,24 @@
 import API from "./friendsProvider.js"
-import makeUserHTML from "./friendsDOM.js"
+import makeFriendHTML from "./friendsDOM.js"
 
 //render the HTML code into the queried field
 
 const friendContainer = document.querySelector(".postedFriends__Selection");
 //Getting the data from the json then activating my event listeners such as delete
-const makeUserList = () => {
+const makeFriendList = () => {
     friendContainer.innerHTML = "";
-    API.getAllUsers()
-        .then((userArray) => {
-            const allUsers = userArray.map(item => {
+    API.getAllFriends()
+        .then((friendArray) => {
+            const allFriends = friendArray.map(item => {
                 const htmlComponent = `<p>${item.title}</p>`
                 return htmlComponent;
             });
-            userArray.forEach(item => {
-                friendContainer.innerHTML += makeUserHTML(item);
+            friendArray.forEach(item => {
+                friendContainer.innerHTML += makeFriendHTML(item);
             });
 
         })
 }
 
 
-export default makeUserList;
+export default makeFriendList;
