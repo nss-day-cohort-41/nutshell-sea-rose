@@ -14,25 +14,30 @@
 
 <body>
     <section class="loginContainer">
-        <h1>Sign Up</h1>
+        <!--The Sign in and Registration area-->
+        <h1>Sign In</h1>
         <form>
-            <label for="loginUsername">Username:</label>
+            <label for="loginUsername">Email:</label>
             <input id="loginUsername" name="loginUsername" type="text" required minlength="3" maxlength="15">
             <label for="loginPassword">Password:</label>
             <input id="loginPassword" name="loginPassword" type="password" required minlength="3" maxlength="15">
-           </form> 
-            <button id="loginButton">Sign In</button>
-            <button id="signout-button" type="button" value="Sign Out">Sign Out</button>
+        </form>
+
+        <button id="loginButton">Sign In</button>
+
         <form autocomplete="on">
             <h1>Create Account</h1>
+            <label for="email">Email:</label>
+            <input id="createEmail" name="email" type="email">
             <label for="createUsername">Username:</label>
             <input id="createUsername" name="createUsername" type="text" required minlength="3" maxlength="15">
             <label for="createPassword">Password:</label>
             <input id="createPassword" name="createPassword" type="password" required minlength="3" maxlength="15">
-            <label for="email">Email:</label>
-            <input id="createEmail" name="email" type="email">
+            <label for="reInputPassword">Reinput Password:</label>
+            <input id="reInputPassword" name="reInputPassword" type="password" required minlength="3" maxlength="15">
+
         </form>
-            <button id="create-account-button" type="submit" value="Create Account">Create Account</button>
+        <button id="create-account-button" type="submit" value="Create Account">Create Account</button>
     </section>
 
     <!-- Added Primary Banner Breakdown-->
@@ -70,68 +75,68 @@
                             <article class="previewEntry"></article>
                             <button class="button__entryDelete"></button>
                         </article>
+                    </section>
+                    <button id="button__newsFormSave">New Event</button>
+                    <section class="newEvent__form">
+                        <form action="">
+                            <input type="hidden" id="eventId" value="" />
+                            <fieldset>
+                                <label>
+                                    Event Name:
+                                    <input type="text" class="event__title" name="event__name">
+                                </label>
+                                <label>
+                                    Event Date:
+                                    <input type="date" class="event__date" name="event__date">
+                                </label>
+                                <label>
+                                    Location:
+                                    <input type="text" class="event__location" name="event__location">
+                                </label>
+                                <button type="submit" class="save__event">Save Event</button>
+                            </fieldset>
+                        </form>
+                    </section>
+
                 </section>
-                <button id="button__newsFormSave">New Event</button>
-                <section class="newEvent__form">
-                    <form action="">
-                        <input type="hidden" id="eventId" value="" />
-                        <fieldset>
-                            <label>
-                                Event Name:
-                                <input type="text" class="event__title" name="event__name">
-                            </label>
-                            <label>
-                                Event Date:
-                                <input type="date" class="event__date" name="event__date">
-                            </label>
-                            <label>
-                                Location:
-                                <input type="text" class="event__location" name="event__location">
-                            </label>
-                            <button type="submit" class="save__event">Save Event</button>
-                        </fieldset>
-                    </form>
-                </section> 
-                
-            </section>
-            <section class="news__mainRightContainer">
+                <section class="news__mainRightContainer">
                     <!--No need for Container...like Events/Tasks gets?-->
-        
-                            <!--Button to populate a form for articles-->
-                                <button id="new__article">New Article</button>
-                        </fieldset>  
-                        <!--form that will allow user to input information-->
-                        <section class="newArticle__form">
-                            <form action="">
-                                <input type="hidden" id="articleId" value="" />
-                                <fieldset>
-                                    <label>
-                                        News Title:
-                                        <input type="text" class="news__title" name="news__title">
-                                    </label>
-                                    <label>
-                                        Synopsis:
-                                        <input type="text" class="news__synopsis" name="synopsis">
-                                    </label>
-                                    <label>
-                                        URL:
-                                        <input type="url" class="news__url" name="news__URL">
-                                    </label>
-                                    <button type="submit" class="save__article">Save Article</button>
-                                </fieldset>
-                            </form>
-                        </section> 
-                        <h1><u>List of Upcoming Events:</u></h1>
-                        <article id="hidden__events" class="postedEvents__Selection"></article>
-                        <h1><u>Your News Update:</u></h1> 
-                        <article id="hidden__article" class="postedNews__Selection" ></article>
-            </section>
-         </div>
-    <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
-         <div class="underHeader__Right">
-            <section class="userWithChat___Container">
-                <section class="chat__Container">
+
+                    <!--Button to populate a form for articles-->
+                    <button id="new__article">New Article</button>
+                    </fieldset>
+                    <!--form that will allow user to input information-->
+                    <section class="newArticle__form">
+                        <form action="">
+                            <input type="hidden" id="articleId" value="" />
+                            <fieldset>
+                                <label>
+                                    News Title:
+                                    <input type="text" class="news__title" name="news__title">
+                                </label>
+                                <label>
+                                    Synopsis:
+                                    <input type="text" class="news__synopsis" name="synopsis">
+                                </label>
+                                <label>
+                                    URL:
+                                    <input type="url" class="news__url" name="news__URL">
+                                </label>
+                                <button type="submit" class="save__article">Save Article</button>
+                            </fieldset>
+                        </form>
+                    </section>
+                    <h1><u>List of Upcoming Events:</u></h1>
+                    <article id="hidden__events" class="postedEvents__Selection"></article>
+                    <h1><u>Your News Update:</u></h1>
+                    <article id="hidden__article" class="postedNews__Selection"></article>
                 </section>
+            </div>
+            <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
+            <div class="underHeader__Right">
+                <section class="userWithChat___Container">
+                    <section class="chat__Container">
+                    </section>
             </div>
             <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
             <div class="underHeader__Right">
