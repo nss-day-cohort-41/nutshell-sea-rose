@@ -1,0 +1,19 @@
+.hideId {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.postedFriends__Selection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.user__card {
+    background-color: wheat;
+}

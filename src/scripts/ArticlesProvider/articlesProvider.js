@@ -21,11 +21,11 @@ const API = {
     //delete articles from json
     deleteArticle(id) {
         return fetch(`http://localhost:3000/articles/${id}`, {
-            method: "DELETE"
-        })
+                method: "DELETE"
+            })
             .then(response => response.json())
 
     }
 }
 
-export default API; 
+export default API;

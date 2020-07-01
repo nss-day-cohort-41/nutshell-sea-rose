@@ -10,19 +10,22 @@ recordArticleEntry.addEventListener("click", event => {
     const title = document.querySelector(".news__title").value
     const synopsis = document.querySelector(".news__synopsis").value
     const url = document.querySelector(".news__url").value
+    let timeStamp = new Date();
+    const time = timeStamp.toTimeString(); //can use toDateString instead for MM/DD/YY fmt
+    //Date.now();  // just Date() gives me a more readable albeit inaccurate timestamp
     if (title === "" || synopsis === "" || url === "") {
         alert("Please fill out all fields!")
 
     } else {
         //if all fields are filled out will create a new article object
-        let newArticle = createArticleEntry(title, synopsis, url)
+        let newArticle = createArticleEntry(title, synopsis, url, time)
         console.log(newArticle)
         API.saveArticleEntry(newArticle)
         API.getAllArticles().then((response) => makeArticleList(response));
     }
 })
 
-
+//delete functionality. Need to try again to have this called somewhere else
 document.querySelector(".postedNews__Selection").addEventListener("click", event => {
     if (event.target.id.startsWith("deleteArticle--")) {
         const articleToDelete = event.target.id.split("--")[1]
@@ -30,4 +33,11 @@ document.querySelector(".postedNews__Selection").addEventListener("click", event
         API.deleteArticle(articleToDelete)
             .then(makeArticleList)
     }
+})
+
+//toggle for the form visibility
+const articleFormVisibilityButton = document.querySelector("#toggle__articles")
+
+articleFormVisibilityButton.addEventListener("click", (clickEvent) => {
+    document.querySelector(".newArticle__form").classList.toggle("hidden")
 })

@@ -4,5 +4,3 @@ import postMessage from "./ChatsProvider/chatsClickEvent.js"
 sessionStorageLogIn();
 
 createNewUser()
-
-postMessage()
