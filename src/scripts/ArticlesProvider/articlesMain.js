@@ -2,6 +2,10 @@ import API from "./articlesProvider.js"
 import makeArticleList from "./articlesList.js"
 import createArticleEntry from "./articlesFactory.js"
 
+let currentUser = sessionStorage.getItem("user");
+console.log(currentUser)
+
+
 //render the original list into the browser
 API.getAllArticles().then((response) => makeArticleList(response));
 //save a new one once all required fields are entered
@@ -13,13 +17,14 @@ recordArticleEntry.addEventListener("click", event => {
     let timeStamp = new Date();
     const time = timeStamp.toTimeString(); //can use toDateString instead for MM/DD/YY fmt
     //Date.now();  // just Date() gives me a more readable albeit inaccurate timestamp
-    
+    const user = sessionStorage.getItem("user");
+
     if (title === "" || synopsis === "" || url === "") {
         alert("Please fill out all fields!")
 
     } else {
         //if all fields are filled out will create a new article object
-        let newArticle = createArticleEntry(title, synopsis, url, time)
+        let newArticle = createArticleEntry(title, synopsis, url, time, user)
         console.log(newArticle)
         API.saveArticleEntry(newArticle)
         //API.getUserId();

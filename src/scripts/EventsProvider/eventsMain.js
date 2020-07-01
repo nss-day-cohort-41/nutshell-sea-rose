@@ -11,13 +11,14 @@ recordEventEntry.addEventListener("click", event => {
     const name = document.querySelector(".event__title").value
     const date = document.querySelector(".event__date").value
     const location = document.querySelector(".event__location").value
+    const user = sessionStorage.getItem("user");
 
     if (name === "" || date === "" || location === "") {
         alert("Please fill out all fields!")
 
     } else {
         //if all fields are filled out will create a new article object
-        let newEvent = createEventEntry(name, date, location)
+        let newEvent = createEventEntry(name, date, location, user)
         console.log(newEvent)
         API.saveEventEntry(newEvent)
         API.getAllEvents().then((response) => makeEventList(response));

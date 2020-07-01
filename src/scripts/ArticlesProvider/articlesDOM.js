@@ -20,6 +20,7 @@ const makeArticleHTML = (articleObj) => {
 	<h2>${articleObj.title}</h2>
 	<p>${articleObj.synopsis}</p>
 	<p>${articleObj.time}</p>
+	<p>Posted by: ${articleObj.user}</p>
     <p><a href="https://images2.minutemediacdn.com/image/upload/c_crop,h_2462,w_3665,x_0,y_130/v1554742286/shape/mentalfloss/539787-istock-157606759.jpg?itok=IE74EkSM">${articleObj.url}</a></p>
     <button id="deleteArticle--${articleObj.id}">Delete</button>
 	</div>

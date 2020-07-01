@@ -26,6 +26,7 @@ const sessionStorageLogIn = () => {
                     sessionStorage.id = user.id
                     sessionStorage.user = user.user
                     sessionStorage.email = user.email
+                   // console.log(sessionStorage.user);
                 }
 
             })

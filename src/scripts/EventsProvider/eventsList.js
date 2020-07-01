@@ -18,8 +18,8 @@ const makeEventList = () => {
                // eventContainer.innerHTML += makeEventHTML(item);
             //});
             eventArray.sort((a, b) => {
-                if (a.date > b.date) return -1;
                 if (a.date < b.date) return -1;
+                if (a.date > b.date) return -1;
                 return 0;
             });
            eventArray.forEach(item => {

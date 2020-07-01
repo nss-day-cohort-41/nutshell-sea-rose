@@ -9,10 +9,10 @@ const makeArticleList = () => {
     articleContainer.innerHTML = "";
     API.getAllArticles()
         .then((articleArray) => {
-            const allArticles = articleArray.map(item => {
-                const htmlComponent = `<p>${item.title}</p>`
-                return htmlComponent;
-            });
+            //const allArticles = articleArray.map(item => {
+              //  const htmlComponent = `<p>${item.title}</p>`
+                //return htmlComponent;
+           // });
             //maybe try sort here for date based presentation
             articleArray.sort((a, b) => {
                 if (a.time > b.time) return -1;
