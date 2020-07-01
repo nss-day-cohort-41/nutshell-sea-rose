@@ -29,7 +29,7 @@ const postMessage = () => {
         event.preventDefault();
 
         newMessageContent = document.querySelector("#newMessageContent").value;
-        const user = sessionStorage.getItem("user")
+        // const user = sessionStorage.getItem("user")
         const userId = sessionStorage.getItem("id");
         console.log(userId);
         console.log(user)

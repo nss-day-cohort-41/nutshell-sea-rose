@@ -49,7 +49,7 @@
     <div class="underHeader">
 
         <div class="underHeader__top">
-            
+
             <!--Start of Section Containing our User Friends List, we will need to talk about how best to label out this portion-->
             <button id="toggle__friends">Add A Friend</button>
             <section class="newFriend__form hidden">
@@ -65,7 +65,7 @@
             </section>
             <h1><u>Friends List:</u></h1>
             <div class="friend__container">
-            <article id="hidden__friends" class="postedFriends__Selection"></article>
+                <article id="hidden__friends" class="postedFriends__Selection"></article>
             </div>
 
 
@@ -141,21 +141,37 @@
                 <article id="hidden__article" class="postedNews__Selection"></article>
             </section>
         </div>
-       
+
         <div class="underHeader__Right">
-            <!--renderMessageToDom will go here-->
+            <div class="outerChat___Container">
+                <h2>Chat Messaging</h2>
+                <section class="postedMessage__Container">
+                    <!--renderMessageToDom will go here-->
+                </section>
+                    <form id="message__Form" action="">
+                        <input type="hidden" id="messageId" value="" />
+                            <label for="chat__Message"></label>
+                            <textarea placeholder="Your Message Here..." name="newMessage" class="input__field" id="newMessageContent" cols="40" rows="2"></textarea>
+                        
+                    </form>
+                    
+                    <article class="newMessage__Container">
+                        <button type="submit" id="sendMessageButton">Send Message</button>
+                    </article>
+                
+            </div>
         </div>
 
-        End of Banners and BEGINs FOOTER
+        <!-- End of Banners and BEGINs FOOTER -->
         <footer class="footer"></footer>
 
 
-    <!--SCRIPT -->
-    <script type="module" src="scripts/main.js"></script>
-    <script type="module" src="scripts/ArticlesProvider/articlesMain.js"></script>
-    <script type="module" src=scripts/AuthenticationProvider/authenticationMain.js></script>
-    <script type="module" src="scripts/EventsProvider/eventsMain.js"></script>
-    <script type="module" src="scripts/FriendsProvider/friendsMain.js"></script>
+        <!--SCRIPT -->
+        <script type="module" src="scripts/main.js"></script>
+        <script type="module" src="scripts/ArticlesProvider/articlesMain.js"></script>
+        <script type="module" src=scripts/AuthenticationProvider/authenticationMain.js></script>
+        <script type="module" src="scripts/EventsProvider/eventsMain.js"></script>
+        <script type="module" src="scripts/FriendsProvider/friendsMain.js"></script>
 </body>
 
 </html>

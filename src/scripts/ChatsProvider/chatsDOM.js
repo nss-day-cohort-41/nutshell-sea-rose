@@ -4,8 +4,20 @@
 
 // This will be the html 
 const renderMessageToDom = (msgObject) => {
-        const renderMessage = `
-        <section class="outerChat___Container">
+        const renderMessage = `<section class="messageCard">
+        <div>
+            <p><font color="gray"; font-weight:bold;> Username:</font> ${msgObject.message}</p>
+            <button id="editButton--${msgObject.id}">Edit</button>
+        </div>`      
+            
+
+        return renderMessage
+    
+}
+
+export default renderMessageToDom;
+
+/* <section class="outerChat___Container">
         <section class="postedMessage__Container">
         </section>
             <article class="newMessage__Container">
@@ -18,10 +30,12 @@ const renderMessageToDom = (msgObject) => {
                 </form>
                     <button type="submit" id="sendMessageButton">Send Message</button>   
             </article>
-        </section>`
+        </section> */
 
-        return renderMessage
-    
-}
-
-export default renderMessageToDom;
+                // <form id="message__Form" action="">
+                //     <input type="hidden" id="messageId" value="" />
+                    
+                //         <label for="chat__Message"></label>
+               
+                    
+                // </form>

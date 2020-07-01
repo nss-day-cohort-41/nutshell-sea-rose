@@ -3,7 +3,7 @@ import renderMessageToDom from "./chatsDOM.js"
 //Wriiten by Zach McWhirter
 
 //Places the rendered html code to the chat message container
-const postedMessageContainer = document.querySelector(".underHeader__Right");
+const postedMessageContainer = document.querySelector(".postedMessage__Container");
 
 const makeMessageList = () => {
     postedMessageContainer.innerHTML = "";
