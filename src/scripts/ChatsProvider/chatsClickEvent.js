@@ -4,7 +4,7 @@ import messageAPI from "./chatsProvider.js"
 
 //Factory Function for creating a new chat message
 const makeNewMessage = (userId, message) => {
-    const newMessageTemplate = { 
+    const newMessageTemplate = {
         userId: userId,
         message: message
     };
@@ -23,7 +23,7 @@ let newMessageContent = document.querySelector("#newMessageContent")
 
 // Click event for posting a message in the chat
 const postMessage = () => {
-    
+
     sendMessageButton.addEventListener("click", event => {
         //prevents auto refresh
         event.preventDefault();
@@ -31,11 +31,11 @@ const postMessage = () => {
         newMessageContent = document.querySelector("#newMessageContent").value;
         const user = sessionStorage.getItem("user")
         const userId = sessionStorage.getItem("id");
-            console.log(userId);
-            console.log(user)
+        console.log(userId);
+        console.log(user)
         const newMessage = makeNewMessage(userId, newMessageContent);
-       
-            console.log(newMessage)
+
+        console.log(newMessage)
         messageAPI.submitMessage(newMessage)
     })
 }
