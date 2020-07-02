@@ -22,6 +22,8 @@ const sessionStorageLogIn = () => {
                     alert("Username or Password are Wrong")
 
                 } else {
+                    document.querySelector(".underHeader").classList.toggle("hidden")
+                    document.querySelector(".loginContainer").classList.toggle("hidden")
                     // We decided to use a key value pairs for our session storage.
                     sessionStorage.id = user.id
                     sessionStorage.user = user.user
@@ -82,5 +84,20 @@ const createNewUser = () => {
     
     })
 }
+
+const registerationFormButton = document.querySelector("#registerButton")
+
+registerationFormButton.addEventListener("click", (clickEvent) => {
+    document.querySelector(".registerForm").classList.toggle("hidden")
+    document.querySelector(".loginContainer").classList.toggle("hidden")
+})
+
+//toggle for the form visibility of Login
+const loginFormButton = document.querySelector("#returnToLogin")
+
+loginFormButton.addEventListener("click", (clickEvent) => {
+    document.querySelector(".registerForm").classList.toggle("hidden")
+    document.querySelector(".loginContainer").classList.toggle("hidden")
+})
 
 export { sessionStorageLogIn, createNewUser, makeUser }

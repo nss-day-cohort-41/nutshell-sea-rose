@@ -1,7 +1,7 @@
 @import "events.css";
 @import "articles.css";
 @import "friends.css";
-
+@import "authentication.css";
 body {
     background-color: darkslategray;
 }
