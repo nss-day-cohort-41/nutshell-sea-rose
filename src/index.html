@@ -68,36 +68,37 @@
 <!--Banner Left Contains Tasks and Events section  -->
 <div class="underHeader__Left">
     <section class="taskEvent__mainLeftContainer">
-<!-- Tasks Section written by Trigg Summs -->
-    <section class="task__Container">
-    <section class="newTaskLeft__form">
-        <form >
-        <!-- <div id="taskContainer"></div> -->
-         <!-- HiddenTaskForm -->
-        <section id="hiddenTaskFormId">
-         <form>
-        <input type="hidden" id="hiddenTaskformId" value="" />
-        ...
-        </form> 
-    </section>
-        <fieldset>
-            <label for="task__title">Task (Location)</label>
-                <input type="form" name="task__title" id="taskTitle" >
-            
-            <label for="task__specificTask">Specific Task</label>
-                <input type="form" name="task__specificTask" id="taskName" >
-            
-            <label for="task__date">Expected Completion Date</label>
-                <input type="date" name="task__date" id="expectedCompletionDate" value="">
-            
-           
-            <!-- <button id="editTask" type="button" value= "">Submit Task Adjustments</button> -->
-        </fieldset>
-     </form>
-   <button id="taskSave" type="submit" value="">Submit your Task!</button>
-   <button id="SaveChanges" type="submit" value="">Save Changes</button>
-   <article id="previewTask__Container" ></article>  
-</section> 
+        <!-- Tasks Section written by Trigg Summs -->
+        <button id="toggle__Tasks">New Task</button>
+        <section class="task__Container">
+            <section class="newTaskLeft__form hidden">
+                <form>
+                    <!-- HiddenTaskForm -->
+                    <section id="hiddenTaskFormId">
+                        <form>
+                            <input type="hidden" id="hiddenTaskformId" value="" />
+                            ...
+                        </form>
+                    </section>
+                    <fieldset>
+                        <label for="task__title">Type of Task: </label>
+                        <input type="form" name="task__title" id="taskTitle">
+        
+                        <label for="task__specificTask">Specific Task:</label>
+                        <input type="form" name="task__specificTask" id="taskName">
+        
+                        <label for="task__date">Expected Completion Date:</label>
+                        <input type="date" name="task__date" id="expectedCompletionDate" value="">
+                        <!-- <button id="editTask" type="button" value= "">Submit Task Adjustments</button> -->
+        
+                </form>
+                <button id="taskSave" type="submit" value="">Submit your Task!</button>
+                <button id="SaveChanges" type="submit" value="">Submit your Tasks Changes!</button>
+                </fieldset>
+            </section>
+            <h1><u>Current List of Tasks:</u></h1>
+            <article id="previewTask__Container"></article>
+
 <!-- Start of Events Container -->
 <button id="toggle__events">New Event</button>
 <section class="newEvent__form hidden">
@@ -160,12 +161,7 @@
     <article id="hidden__article" class="postedNews__Selection"></article>
 </section>
 </div>
-<!--Banner Right Contains Chat and USER MESSAGE CENTER-->
-<div class="underHeader__Right">
-<section class="userWithChat___Container">
-    <section class="chat__Container">
-    </section>
-</div>
+
 <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
 <div class="underHeader__Right">
 <section class="userWithChat___Container">

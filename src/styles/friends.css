@@ -17,3 +17,9 @@
 .user__card {
     background-color: wheat;
 }
+
+.friend__container {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFCF2;
+}

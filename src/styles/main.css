@@ -3,11 +3,49 @@
 @import "friends.css";
 @import "tasks.css";
 
-body {
-    background-color: darkslategray;
-}
+    body {
+        background-color: #FFFCF2; 
+    }
 
-.friend__container {
+    .header{
+        background-color: #FFFCF2;
+    }
+
+    .underHeader{
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFCF2;
+    }
+
+
+    .underHeader__Top {
+        background-color: #EB5E28;
+    }
+
+    .underHeader__Left {
     display: flex;
-    flex-direction: row;
-}
+    flex-direction: column;
+    flex: 3; 
+    background-color: #FFFCF2;
+    }
+
+    .underHeader__Right{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #EB5E28;
+    }
+
+    .footer{
+    display: flex;
+    }
+
+
+
+
+/* Targetting Fieldset Class's */
+
+
+
+/* Targetting Buttons Class's */
+
