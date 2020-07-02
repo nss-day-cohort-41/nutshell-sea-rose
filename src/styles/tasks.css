@@ -1,0 +1,11 @@
+.hideId {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.tasks__card {
+    background-color: wheat;
+}

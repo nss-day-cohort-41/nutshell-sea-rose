@@ -71,106 +71,128 @@
             <div class="friend__container">
             <article id="hidden__friends" class="postedFriends__Selection"></article>
             </div>
+<!--Banner Left Contains Tasks and Events section  -->
+<div class="underHeader__Left">
+    <section class="taskEvent__mainLeftContainer">
+<!-- Tasks Section written by Trigg Summs -->
+    <section class="task__Container">
+    <section class="newTaskLeft__form">
+        <form >
+        <!-- <div id="taskContainer"></div> -->
+         <!-- HiddenTaskForm -->
+        <section id="hiddenTaskFormId">
+         <form>
+        <input type="hidden" id="hiddenTaskformId" value="" />
+        ...
+        </form> 
+    </section>
+        <fieldset>
+            <label for="task__title">Task (Location)</label>
+                <input type="form" name="task__title" id="taskTitle" >
+            
+            <label for="task__specificTask">Specific Task</label>
+                <input type="form" name="task__specificTask" id="taskName" >
+            
+            <label for="task__date">Expected Completion Date</label>
+                <input type="date" name="task__date" id="expectedCompletionDate" value="">
+            
+           
+            <!-- <button id="editTask" type="button" value= "">Submit Task Adjustments</button> -->
+        </fieldset>
+     </form>
+   <button id="taskSave" type="submit" value="">Submit your Task!</button>
+   <button id="SaveChanges" type="submit" value="">Save Changes</button>
+   <article id="previewTask__Container" ></article>  
+</section> 
+<!-- Start of Events Container -->
+<button id="toggle__events">New Event</button>
+<section class="newEvent__form hidden">
+    <form action="">
+        <input type="hidden" id="eventId" value="" />
+        <fieldset>
+            <label>
+                Event Name:
+                <input type="text" class="event__title" name="event__name">
+            </label>
+            <label>
+                Event Date:
+                <input type="date" class="event__date" name="event__date">
+            </label>
+            <label>
+                Location:
+                <input type="text" class="event__location" name="event__location">
+            </label>
+            <button type="submit" class="save__event">Save Event</button>
+        </fieldset>
+    </form>
+</section>
+<h1><u>List of Upcoming Events:</u></h1>
+<article id="hidden__events" class="postedEvents__Selection"></article>
+
+</section>
 
 
-            <!--Banner Left Contains Tasks and Events -->
-            <!-- <div class="underHeader__Left"> -->
-            <!-- <section class="taskEvent__mainLeftContainer"> -->
-            <!-- <section class="task__Container"> -->
-            <!--Article Class needed? -->
-            <!-- <fieldset class="task__formLeft"> -->
-            <!-- <form action=""></form> -->
-            <!-- </fieldset> -->
-            <!-- <button class="button__entrySave"></button> -->
-            <!-- <article class="task__selectionLeft"> -->
-            <!-- <article class="previewEntry"></article> -->
-            <!-- <button class="button__entryDelete"></button> -->
-            <!-- </article> -->
-            <!-- </section> -->
-
-            <button id="toggle__events">New Event</button>
-            <section class="newEvent__form hidden">
-                <form action="">
-                    <input type="hidden" id="eventId" value="" />
-                    <fieldset>
-                        <label>
-                            Event Name:
-                            <input type="text" class="event__title" name="event__name">
-                        </label>
-                        <label>
-                            Event Date:
-                            <input type="date" class="event__date" name="event__date">
-                        </label>
-                        <label>
-                            Location:
-                            <input type="text" class="event__location" name="event__location">
-                        </label>
-                        <button type="submit" class="save__event">Save Event</button>
-                    </fieldset>
-                </form>
-            </section>
-            <h1><u>List of Upcoming Events:</u></h1>
-            <article id="hidden__events" class="postedEvents__Selection"></article>
-
-            </section>
-            <section class="news__mainRightContainer">
-                <!--No need for Container...like Events/Tasks gets?-->
-
-                <!--Button to populate a form for articles-->
-                <button id="toggle__articles">New Article</button>
-                </fieldset>
-                <!--form that will allow user to input information-->
-                <section class="newArticle__form hidden">
-                    <form action="">
-                        <input type="hidden" id="articleId" value="" />
-                        <fieldset>
-                            <label>
-                                News Title:
-                                <input type="text" class="news__title" name="news__title">
-                            </label>
-                            <label>
-                                Synopsis:
-                                <input type="text" class="news__synopsis" name="synopsis">
-                            </label>
-                            <label>
-                                URL:
-                                <input type="url" class="news__url" name="news__URL">
-                            </label>
-                            <button type="submit" class="save__article">Save Article</button>
-                        </fieldset>
-                    </form>
-                </section>
-
-                <h1><u>Your News Update:</u></h1>
-                <article id="hidden__article" class="postedNews__Selection"></article>
-            </section>
-        </div>
-        <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
-        <div class="underHeader__Right">
-            <section class="userWithChat___Container">
-                <section class="chat__Container">
-                </section>
-        </div>
-        <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
-        <div class="underHeader__Right">
-            <section class="userWithChat___Container">
-                <section class="chat__Container">
-                </section>
-                <article class="userMessage__bottomSelection">
-                </article>
-            </section>
-        </div>
-
-        <!--End of Banners and BEGINs FOOTER -->
-        <footer class="footer"></footer>
 
 
-    <!--SCRIPT -->
+<section class="news__mainRightContainer">
+    <!--No need for Container...like Events/Tasks gets?-->
+
+    <!--Button to populate a form for articles-->
+    <button id="toggle__articles">New Article</button>
+    </fieldset>
+    <!--form that will allow user to input information-->
+    <section class="newArticle__form hidden">
+        <form action="">
+            <input type="hidden" id="articleId" value="" />
+            <fieldset>
+                <label>
+                    News Title:
+                    <input type="text" class="news__title" name="news__title">
+                </label>
+                <label>
+                    Synopsis:
+                    <input type="text" class="news__synopsis" name="synopsis">
+                </label>
+                <label>
+                    URL:
+                    <input type="url" class="news__url" name="news__URL">
+                </label>
+                <button type="submit" class="save__article">Save Article</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <h1><u>Your News Update:</u></h1>
+    <article id="hidden__article" class="postedNews__Selection"></article>
+</section>
+</div>
+<!--Banner Right Contains Chat and USER MESSAGE CENTER-->
+<div class="underHeader__Right">
+<section class="userWithChat___Container">
+    <section class="chat__Container">
+    </section>
+</div>
+<!--Banner Right Contains Chat and USER MESSAGE CENTER-->
+<div class="underHeader__Right">
+<section class="userWithChat___Container">
+    <section class="chat__Container">
+    </section>
+    <article class="userMessage__bottomSelection">
+    </article>
+</section>
+</div>
+
+<!--End of Banners and BEGINs FOOTER -->
+<footer class="footer"></footer>
+
+
+    
     <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/TasksProvider/tasksMain.js"></script>
     <script type="module" src="scripts/ArticlesProvider/articlesMain.js"></script>
     <script type="module" src=scripts/AuthenticationProvider/authenticationClickEvents.js></script>
     <script type="module" src="scripts/EventsProvider/eventsMain.js"></script>
-    <script type="module" src="scripts/FriendsProvider/friendsMain.js"></script>
+    <script type="module" src="scripts/FriendsProvider/friendsMain.js"></script> 
 </body>
 
 </html>

@@ -2,6 +2,8 @@
 @import "articles.css";
 @import "friends.css";
 @import "authentication.css";
+@import "tasks.css";
+
 body {
     background-color: darkslategray;
 }
