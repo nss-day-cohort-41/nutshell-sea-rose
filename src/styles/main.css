@@ -5,10 +5,18 @@
 @import "tasks.css";
 
 body {
-    background-color: darkslategray;
+    background-color: #403D39;
 }
 
 .friend__container {
     display: flex;
     flex-direction: row;
+}
+
+#loginButton {
+    background-color: #EB5E28;
+}
+
+#registerButton {
+    background-color: #EB5E28;
 }
