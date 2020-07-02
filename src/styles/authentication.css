@@ -1,0 +1,17 @@
+.loginFormSection, .registerFormSection  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginButtonArea, .registrationButtonArea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginButton, #create-account-button {
+    margin: 7px;
+}
