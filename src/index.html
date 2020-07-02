@@ -7,129 +7,203 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles/main.css">
     <!-- FONTS COLLECTION -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Squada+One&display=swap" rel="stylesheet">
 
     <!-- END OF FONTS -->
     <title>NutShell: Sea Rose</title>
 </head>
-
 <body>
     <section class="loginContainer">
-        <h1>Sign Up</h1>
-        <form>
-            <label for="loginUsername">Username:</label>
-            <input id="loginUsername" name="loginUsername" type="text" required minlength="3" maxlength="15">
-            <label for="loginPassword">Password:</label>
-            <input id="loginPassword" name="loginPassword" type="password" required minlength="3" maxlength="15">
-           </form> 
-            <button id="loginButton">Sign In</button>
-            <button id="signout-button" type="button" value="Sign Out">Sign Out</button>
-        <form autocomplete="on">
-            <h1>Create Account</h1>
-            <label for="createUsername">Username:</label>
-            <input id="createUsername" name="createUsername" type="text" required minlength="3" maxlength="15">
-            <label for="createPassword">Password:</label>
-            <input id="createPassword" name="createPassword" type="password" required minlength="3" maxlength="15">
-            <label for="email">Email:</label>
-            <input id="createEmail" name="email" type="email">
-        </form>
-            <button id="create-account-button" type="submit" value="Create Account">Create Account</button>
+        <!-- To late in the game to change. -->
+        <!--The Sign in and Registration area-->
+        <section class= "loginForm"></section>
+            <form class="loginFormSection">
+                <h5>Sign In</h5>
+                <label for="loginUsername">Email:</label>
+                <input id="loginUsername" name="loginUsername" type="text" required minlength="3" maxlength="15">
+                <label for="loginPassword">Password:</label>
+                <input id="loginPassword" name="loginPassword" type="password" required minlength="3" maxlength="15">
+            </form>
+            <div class="loginButtonArea">
+                <button id="loginButton">Sign In</button>
+                <button id="registerButton">Register</button>
+            </div>
+         </section>
+        
+        <section class="registerForm hidden">
+            <form class="registerFormSection">
+                <h3>Create Account</h3>
+                <label for="email">Email:</label>
+                <input id="createEmail" name="email" type="email">
+                <label for="createUsername">Username:</label>
+                <input id="createUsername" name="createUsername" type="text" required minlength="3" maxlength="15">
+                <label for="createPassword">Password:</label>
+                <input id="createPassword" name="createPassword" type="password" required minlength="3" maxlength="15">
+                <label for="reInputPassword">Reinput Password:</label>
+                <input id="reInputPassword" name="reInputPassword" type="password" required minlength="3" maxlength="15">
+            </form>
+            <div class="registrationButtonArea">
+                <button id="create-account-button" type="submit" value="Create Account">Create Account</button>
+                <button id="returnToLogin" type="submit" value="Create Account">Return to Login</button>
+            </div>
+        </section>
     </section>
 
-    <!-- Added Primary Banner Breakdown-->
-    <header class="Header">
-        <div class="header__logo">
-            <div class="headerTitle1">NutShell: "SEA ROSE"</div>
-    </header>
     <!--End of Our Main Banner -->
-    <div class="underHeader">
-
+    <div class="underHeader hidden">
+        <div class="header__logo"></div>
+            <header class="headerTitle1">
+                <h1>NutShell: "SEA ROSE"</h1>
+            </header>
         <div class="underHeader__top">
+            
             <!--Start of Section Containing our User Friends List, we will need to talk about how best to label out this portion-->
-            <section class="">
-                <fieldset class="friend__form">
-                    <form action=""></form>
-                    <button class="button__searchFriend"></button>
-                </fieldset>
-                <button class="button__saveFriend"></button>
-                <button class="button__deleteFriend"></button>
-                <article class="previewFriend">
-
-                </article>
-            </section>
-
-            <!--Banner Left Contains Tasks and Events -->
-            <div class="underHeader__Left">
-                <section class="taskEvent__mainLeftContainer">
-                    <section class="task__Container">
-                        <!--Article Class needed? -->
-                        <fieldset class="task__formLeft">
-                            <form action=""></form>
-                        </fieldset>
-                        <button class="button__entrySave"></button>
-                        <article class="task__selectionLeft">
-                            <article class="previewEntry"></article>
-                            <button class="button__entryDelete"></button>
-                        </article>
-                    </section>
-                    <section class="event__Container">
-                        <!--Article Class needed? -->
-                        <fieldset class="event__formRight">
-                            <form action=""></form>
-                        </fieldset>
-                        <button class="button__eventSave"></button>
-                        <article class="event__selectionRight">
-                            <article class="previewEvent"></article>
-                            <button class="button__eventDelete"></button>
-                        </article>
-                    </section>
-                </section>
-                <section class="news__mainRightContainer">
-                    <!--No need for Container...like Events/Tasks gets?-->
-                    <fieldset class="news__form">
-                        <form action=""></form>
-                        <button id="button__newsFormSave">New Article</button>
+            <button id="toggle__friends">Add A Friend</button>
+            <section class="newFriend__form hidden">
+                <form action="">
+                    <fieldset>
+                        <label for="">
+                            Add User
+                            <input type="text" name="friend__name" class="friend__name">
+                        </label>
+                        <button type="submit" class="save__friend">Add to Friends List</button>
                     </fieldset>
-                    <section class="newArticle__form">
-                        <form action="">
-                            <fieldset>
-                                <label>
-                                    News Title:
-                                    <input type="text" class="news__title" name="news__title">
-                                </label>
-                                <label>
-                                    Synopsis:
-                                    <input type="text" class="news__synopsis" name="synopsis">
-                                </label>
-                                <label>
-                                    URL:
-                                    <input type="url" class="news__url" name="news__URL">
-                                </label>
-                                <button type="submit" class="save__article">Save Article</button>
-                            </fieldset>
+                </form>
+            </section>
+            <h6><u>Friends List:</u></h6>
+            <div class="friend__container">
+            <article id="hidden__friends" class="postedFriends__Selection"></article>
+            </div>
+<!--Banner Left Contains Tasks and Events section  -->
+<div class="underHeader__Left">
+    <section class="taskEvent__mainLeftContainer">
+        <!-- Tasks Section written by Trigg Summs -->
+        <button id="toggle__Tasks">New Task</button>
+        <section class="task__Container">
+            <section class="newTaskLeft__form hidden">
+                <form>
+                    <!-- HiddenTaskForm -->
+                    <section id="hiddenTaskFormId">
+                        <form>
+                            <input type="hidden" id="hiddenTaskformId" value="" />
+                            ...
                         </form>
                     </section>
-                    <article class="postedNews__Selection"> </article>
-                </section>
-            </div>
-            <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
-            <div class="underHeader__Right">
-                <section class="userWithChat___Container">
-                    <section class="chat__Container">
-                    </section>
-                    <article class="userMessage__bottomSelection">
-                    </article>
-                </section>
-            </div>
-        </div>
+                    <fieldset>
+                        <label for="task__title">Type of Task: </label>
+                        <input type="form" name="task__title" id="taskTitle">
+        
+                        <label for="task__specificTask">Specific Task:</label>
+                        <input type="form" name="task__specificTask" id="taskName">
+        
+                        <label for="task__date">Expected Completion Date:</label>
+                        <input type="date" name="task__date" id="expectedCompletionDate" value="">
+                        <!-- <button id="editTask" type="button" value= "">Submit Task Adjustments</button> -->
+        
+                </form>
+                <button id="taskSave" type="submit" value="">Submit your Task!</button>
+                <button id="SaveChanges" type="submit" value="">Submit your Tasks Changes!</button>
+                </fieldset>
+            </section>
+            <h2 class=" SectionsHeaders"><u>Current List of Tasks:</u></h2>
+            <article id="previewTask__Container"></article>
+<!-- Start of Events Container -->
+<section class="events">
+<button id="toggle__events">New Event</button>
+<section class="newEvent__form hidden">
+    <form action="">
+        <input type="hidden" id="eventId" value="" />
+        <fieldset>
+            <label>
+                Event Name:
+                <input type="text" class="event__title" name="event__name">
+            </label>
+            <label>
+                Event Date:
+                <input type="date" class="event__date" name="event__date">
+            </label>
+            <label>
+                Location:
+                <input type="text" class="event__location" name="event__location">
+            </label>
+            <button type="submit" class="save__event">Save Event</button>
+        </fieldset>
+    </form>
+</section>
+<h2 class=" SectionsHeaders"><u>List of Upcoming Events:</u></h2>
+<article id="hidden__events" class="postedEvents__Selection"></article>
+ </section>
+</section>
 
-        <!--End of Banners and BEGINs FOOTER -->
-        <footer class="footer"></footer>
 
 
-        <!--SCRIPT -->
-        <script type="module" src="scripts/main.js"></script>
-        <script type="module" src="scripts/ArticlesProvider/articlesMain.js"></script>
-        <script type="module" src=scripts/AuthenticationProvider/authenticationMain.js></script>
+
+<section class="news__mainRightContainer">
+    <!--No need for Container...like Events/Tasks gets?-->
+
+    <!--Button to populate a form for articles-->
+    <button id="toggle__articles">New Article</button>
+
+
+    </fieldset>
+    <!--form that will allow user to input information-->
+    <section class="newArticle__form hidden">
+        <form action="">
+            <input type="hidden" id="articleId" value="" />
+            <fieldset>
+                <label>
+                    News Title:
+                    <input type="text" class="news__title" name="news__title">
+                </label>
+                <label>
+                    Synopsis:
+                    <input type="text" class="news__synopsis" name="synopsis">
+                </label>
+                <label>
+                    URL:
+                    <input type="url" class="news__url" name="news__URL">
+                </label>
+                <button type="submit" class="save__article">Save Article</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <h2 class=" SectionsHeaders"><u>Your News Update:</u></h2>
+    <article id="hidden__article" class="postedNews__Selection"></article>
+</section>
+
+</div>
+<!--Banner Right Contains Chat and USER MESSAGE CENTER-->
+<div class="underHeader__Right">
+    <div class="outerChat___Container">
+        <h2>Chat Messaging</h2>
+        <section class="postedMessage__Container">
+            <!--renderMessageToDom will go here-->
+        </section>
+            <form id="message__Form" action="">
+                <input type="hidden" id="messageId" value="" />
+                    <label for="chat__Message"></label>
+                    <textarea placeholder="Your Message Here..." name="newMessage" class="input__field" id="newMessageContent" cols="40" rows="2"></textarea>
+
+            </form>
+
+            <article class="newMessage__Container">
+                <button type="button" id="sendMessageButton">Send Message</button>
+            </article>
+
+    </div>
+</div>
+
+<!--End of Banners and BEGINs FOOTER -->
+<footer class="footer"></footer>
+
+
+    
+    <script type="module" src="scripts/main.js"></script>
+    <script type="module" src="scripts/TasksProvider/tasksMain.js"></script>
+    <script type="module" src="scripts/ArticlesProvider/articlesMain.js"></script>
+    <script type="module" src="scripts/EventsProvider/eventsMain.js"></script>
+    <script type="module" src="scripts/FriendsProvider/friendsMain.js"></script> 
 </body>
 
 </html>

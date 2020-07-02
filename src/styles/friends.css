@@ -1,0 +1,28 @@
+.hideId {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.postedFriends__Selection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.user__card {
+    background-color: cornsilk;
+}
+
+.friend__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

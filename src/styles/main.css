@@ -1,0 +1,132 @@
+@import "events.css";
+@import "articles.css";
+@import "friends.css";
+@import "authentication.css";
+@import "tasks.css";
+
+body {
+    background-color: #CCC5B9;
+}
+
+
+    .header{
+        background-color: #403D39;
+    }
+
+    .underHeader{
+  
+        background-color: #FFFCF2;
+        
+    
+    }
+
+    .underHeader__Top {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start; 
+        padding: 10px;
+        margin: 10px;
+        background-color: #EB5E28;
+
+    }
+
+    .underHeader__Left {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    background-color: #FFFCF2;
+    }
+
+    .underHeader__Right{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #EB5E28;
+    }
+
+    .footer{
+    display: flex;
+    }
+
+
+
+
+/* Targetting TesxtAreas */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+
+
+
+/* Targetting Buttons Class's */
+button{
+display:flex;
+    padding: 5px 5px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #EB5E28;
+    border: none;
+    border-radius: 1px;
+    box-shadow: 0 9px #999;
+    display: inline-block;
+  }
+  
+  .button:hover {background-color: #e2a602}
+  
+  .button:active {
+    background-color: #ac6a2d;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+    
+
+
+/* Controls our Main title  */
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    margin: 0em;
+    padding: 0em;
+    text-shadow:1px 1px rgb(233, 176, 91);
+    text-align: center;
+    
+
+}
+/* Friends list title  */
+h6{
+    color: purple;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
+/*This is the control for header inside the tasks,events,articles  */
+.SectionsHeaders{
+    color: blue;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    opacity: 100%; 
+    color: black;
+    text-shadow:1px 1px (#252422);
+
+}
