@@ -3,8 +3,7 @@
 
 const user = sessionStorage.getItem("user")
 
-
-// This will be the html 
+// This will be the html represention
 const renderMessageToDom = (msgObject) => {
         const renderMessage = `<section class="messageCard">
         <div>

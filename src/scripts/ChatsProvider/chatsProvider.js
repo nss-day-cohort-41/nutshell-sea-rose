@@ -1,3 +1,5 @@
+const url = "http://localhost:3000";
+
 const messageAPI = {
 
     getAllMessages: () => {
@@ -5,22 +7,23 @@ const messageAPI = {
         .then(response => response.json());
     },
     submitMessage: (newMsg) => {
-        return fetch("http://localhost:3000/messages", {
+        return fetch(`${url}/messages`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(newMsg)
         })
-        
-
+    },
+    updateMessage: (id, updatedMessage) => {
+        return fetch(`${url}/messages/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedMessage)
+        })
     }
 }
-
-// NEXT UP:
-// updateMessage function
-
-
-
 
 export default messageAPI
