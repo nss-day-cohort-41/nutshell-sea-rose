@@ -13,45 +13,39 @@
 </head>
 <body>
     <section class="loginContainer">
-        <!-- To late in the game to change. -->
         <!--The Sign in and Registration area-->
-        <section class= "loginForm"></section>
-            <form class="loginFormSection">
-                <h3>Sign In</h3>
-                <label for="loginUsername">Email:</label>
-                <input id="loginUsername" name="loginUsername" type="text" required minlength="3" maxlength="15">
-                <label for="loginPassword">Password:</label>
-                <input id="loginPassword" name="loginPassword" type="password" required minlength="3" maxlength="15">
-            </form>
-            <div class="loginButtonArea">
-                <button id="loginButton">Sign In</button>
-                <button id="registerButton">Register</button>
-            </div>
-         </section>
-        
-        <section class="registerForm hidden">
-            <form class="registerFormSection">
-                <h3>Create Account</h3>
-                <label for="email">Email:</label>
-                <input id="createEmail" name="email" type="email">
-                <label for="createUsername">Username:</label>
-                <input id="createUsername" name="createUsername" type="text" required minlength="3" maxlength="15">
-                <label for="createPassword">Password:</label>
-                <input id="createPassword" name="createPassword" type="password" required minlength="3" maxlength="15">
-                <label for="reInputPassword">Reinput Password:</label>
-                <input id="reInputPassword" name="reInputPassword" type="password" required minlength="3" maxlength="15">
-            </form>
-            <div class="registrationButtonArea">
-                <button id="create-account-button" type="submit" value="Create Account">Create Account</button>
-                <button id="returnToLogin" type="submit" value="Create Account">Return to Login</button>
-            </div>
-        </section>
+        <h1>Sign In</h1>
+        <form>
+            <label for="loginUsername">Email:</label>
+            <input id="loginUsername" name="loginUsername" type="text" required minlength="3" maxlength="15">
+            <label for="loginPassword">Password:</label>
+            <input id="loginPassword" name="loginPassword" type="password" required minlength="3" maxlength="15">
+        </form>
+
+        <button id="loginButton">Sign In</button>
+
+        <form autocomplete="on">
+            <h1>Create Account</h1>
+            <label for="email">Email:</label>
+            <input id="createEmail" name="email" type="email">
+            <label for="createUsername">Username:</label>
+            <input id="createUsername" name="createUsername" type="text" required minlength="3" maxlength="15">
+            <label for="createPassword">Password:</label>
+            <input id="createPassword" name="createPassword" type="password" required minlength="3" maxlength="15">
+            <label for="reInputPassword">Reinput Password:</label>
+            <input id="reInputPassword" name="reInputPassword" type="password" required minlength="3" maxlength="15">
+
+        </form>
+        <button id="create-account-button" type="submit" value="Create Account">Create Account</button>
     </section>
 
-    <!--End of Our Main Banner -->
-    <div class="underHeader hidden">
-        <div class="header__logo"></div>
+    <!-- Added Primary Banner Breakdown-->
+    <header class="Header">
+        <div class="header__logo">
             <div class="headerTitle1">NutShell: "SEA ROSE"</div>
+    </header>
+    <!--End of Our Main Banner -->
+    <div class="underHeader">
         <div class="underHeader__top">
             
             <!--Start of Section Containing our User Friends List, we will need to talk about how best to label out this portion-->
@@ -167,7 +161,6 @@
     <article id="hidden__article" class="postedNews__Selection"></article>
 </section>
 </div>
-
 <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
 <div class="underHeader__Right">
 <section class="userWithChat___Container">
