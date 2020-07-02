@@ -51,14 +51,13 @@ export default {
 						});
 				}
 			})
-/* 
-			const HideTaskButton = document.querySelector(".toggleTasks")
+
+			const HideTaskButton = document.querySelector("#toggle__Tasks")
 
 			HideTaskButton.addEventListener("click", clickEvent => {
-				document.querySelector(".tipList").classList.toggle("hidden")
+				document.querySelector(".newTaskLeft__form").classList.toggle("hidden")
 			})
-			 */
-
+			 
 
 			const clearInputs = () => {
 

@@ -3,7 +3,7 @@
 
 
 
-const makeTask = (taskTitle, taskName, expectedCompletionDate, completeStatus, userId) => {
+const makeTask = (taskTitle, taskName, expectedCompletionDate, completeStatus, user) => {
         const taskObj = {
 
 
@@ -11,11 +11,10 @@ const makeTask = (taskTitle, taskName, expectedCompletionDate, completeStatus, u
                 taskName: taskName,
                 expectedCompletionDate: expectedCompletionDate,
                 completeStatus: false,
-                userId: userId
+                user: user
         }
 
         return taskObj;
 }
 
 export default makeTask;
-

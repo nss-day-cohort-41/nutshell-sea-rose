@@ -15,4 +15,8 @@ const makeMessageList = () => {
     })
 }
 
+<<<<<<< HEAD
 export default makeMessageList
+=======
+export default makeMessageList 
+>>>>>>> 21443830b258b06e12b1b4232bb941f8d466c2c6

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles/main.css">
     <!-- FONTS COLLECTION -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Squada+One&display=swap" rel="stylesheet">
 
     <!-- END OF FONTS -->
     <title>NutShell: Sea Rose</title>
@@ -17,7 +18,7 @@
         <!--The Sign in and Registration area-->
         <section class= "loginForm"></section>
             <form class="loginFormSection">
-                <h3>Sign In</h3>
+                <h5>Sign In</h5>
                 <label for="loginUsername">Email:</label>
                 <input id="loginUsername" name="loginUsername" type="text" required minlength="3" maxlength="15">
                 <label for="loginPassword">Password:</label>
@@ -51,7 +52,9 @@
     <!--End of Our Main Banner -->
     <div class="underHeader hidden">
         <div class="header__logo"></div>
-            <div class="headerTitle1">NutShell: "SEA ROSE"</div>
+            <header class="headerTitle1">
+                <h1>NutShell: "SEA ROSE"</h1>
+            </header>
         <div class="underHeader__top">
 
             <!--Start of Section Containing our User Friends List, we will need to talk about how best to label out this portion-->
@@ -67,44 +70,45 @@
                     </fieldset>
                 </form>
             </section>
-            <h1><u>Friends List:</u></h1>
+            <h6><u>Friends List:</u></h6>
             <div class="friend__container">
                 <article id="hidden__friends" class="postedFriends__Selection"></article>
             </div>
 <!--Banner Left Contains Tasks and Events section  -->
 <div class="underHeader__Left">
     <section class="taskEvent__mainLeftContainer">
-<!-- Tasks Section written by Trigg Summs -->
-    <section class="task__Container">
-    <section class="newTaskLeft__form">
-        <form >
-        <!-- <div id="taskContainer"></div> -->
-         <!-- HiddenTaskForm -->
-        <section id="hiddenTaskFormId">
-         <form>
-        <input type="hidden" id="hiddenTaskformId" value="" />
-        ...
-        </form> 
-    </section>
-        <fieldset>
-            <label for="task__title">Task (Location)</label>
-                <input type="form" name="task__title" id="taskTitle" >
-            
-            <label for="task__specificTask">Specific Task</label>
-                <input type="form" name="task__specificTask" id="taskName" >
-            
-            <label for="task__date">Expected Completion Date</label>
-                <input type="date" name="task__date" id="expectedCompletionDate" value="">
-            
-           
-            <!-- <button id="editTask" type="button" value= "">Submit Task Adjustments</button> -->
-        </fieldset>
-     </form>
-   <button id="taskSave" type="submit" value="">Submit your Task!</button>
-   <button id="SaveChanges" type="submit" value="">Save Changes</button>
-   <article id="previewTask__Container" ></article>  
-</section> 
+        <!-- Tasks Section written by Trigg Summs -->
+        <button id="toggle__Tasks">New Task</button>
+        <section class="task__Container">
+            <section class="newTaskLeft__form hidden">
+                <form>
+                    <!-- HiddenTaskForm -->
+                    <section id="hiddenTaskFormId">
+                        <form>
+                            <input type="hidden" id="hiddenTaskformId" value="" />
+                            ...
+                        </form>
+                    </section>
+                    <fieldset>
+                        <label for="task__title">Type of Task: </label>
+                        <input type="form" name="task__title" id="taskTitle">
+        
+                        <label for="task__specificTask">Specific Task:</label>
+                        <input type="form" name="task__specificTask" id="taskName">
+        
+                        <label for="task__date">Expected Completion Date:</label>
+                        <input type="date" name="task__date" id="expectedCompletionDate" value="">
+                        <!-- <button id="editTask" type="button" value= "">Submit Task Adjustments</button> -->
+        
+                </form>
+                <button id="taskSave" type="submit" value="">Submit your Task!</button>
+                <button id="SaveChanges" type="submit" value="">Submit your Tasks Changes!</button>
+                </fieldset>
+            </section>
+            <h2 class=" SectionsHeaders"><u>Current List of Tasks:</u></h2>
+            <article id="previewTask__Container"></article>
 <!-- Start of Events Container -->
+<section class="events">
 <button id="toggle__events">New Event</button>
 <section class="newEvent__form hidden">
     <form action="">
@@ -126,9 +130,9 @@
         </fieldset>
     </form>
 </section>
-<h1><u>List of Upcoming Events:</u></h1>
+<h2 class=" SectionsHeaders"><u>List of Upcoming Events:</u></h2>
 <article id="hidden__events" class="postedEvents__Selection"></article>
-
+ </section>
 </section>
 
 
@@ -139,6 +143,8 @@
 
     <!--Button to populate a form for articles-->
     <button id="toggle__articles">New Article</button>
+
+
     </fieldset>
     <!--form that will allow user to input information-->
     <section class="newArticle__form hidden">
@@ -162,24 +168,30 @@
         </form>
     </section>
 
-    <h1><u>Your News Update:</u></h1>
+    <h2 class=" SectionsHeaders"><u>Your News Update:</u></h2>
     <article id="hidden__article" class="postedNews__Selection"></article>
 </section>
+
 </div>
 <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
 <div class="underHeader__Right">
-<section class="userWithChat___Container">
-    <section class="chat__Container">
-    </section>
-</div>
-<!--Banner Right Contains Chat and USER MESSAGE CENTER-->
-<div class="underHeader__Right">
-<section class="userWithChat___Container">
-    <section class="chat__Container">
-    </section>
-    <article class="userMessage__bottomSelection">
-    </article>
-</section>
+    <div class="outerChat___Container">
+        <h2>Chat Messaging</h2>
+        <section class="postedMessage__Container">
+            <!--renderMessageToDom will go here-->
+        </section>
+            <form id="message__Form" action="">
+                <input type="hidden" id="messageId" value="" />
+                    <label for="chat__Message"></label>
+                    <textarea placeholder="Your Message Here..." name="newMessage" class="input__field" id="newMessageContent" cols="40" rows="2"></textarea>
+
+            </form>
+
+            <article class="newMessage__Container">
+                <button type="button" id="sendMessageButton">Send Message</button>
+            </article>
+
+    </div>
 </div>
 
             <!--Banner Left Contains Tasks and Events -->

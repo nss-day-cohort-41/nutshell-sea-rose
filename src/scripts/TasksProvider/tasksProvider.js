@@ -59,7 +59,12 @@ const API = {
             })
         
 
-    }
+    },
+    getUserId() {
+        return fetch(`http://localhost:3000/users/${id}`,) 
+            .then(response => response.json())
+        }
+    
 }
 
 export default API;

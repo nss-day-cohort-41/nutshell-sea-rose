@@ -26,4 +26,8 @@ const messageAPI = {
     }
 }
 
+<<<<<<< HEAD
 export default messageAPI
+=======
+export default messageAPI 
+>>>>>>> 21443830b258b06e12b1b4232bb941f8d466c2c6
