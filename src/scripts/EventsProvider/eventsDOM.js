@@ -7,7 +7,7 @@ const makeEventHTML = (eventObj) => {
 	<h2>${eventObj.name}</h2>
 	<p><i>Event Date:</i>${eventObj.date}</p>
     <p><i>Location:<i>${eventObj.location}</p>
-    <button id="deleteEvent--${eventObj.id}">Delete</button>
+    <button id="deleteEvent--${eventObj.id}">Delete</button>  
     </div>
 	
 	`
