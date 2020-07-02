@@ -1,6 +1,7 @@
 @import "events.css";
 @import "articles.css";
 @import "friends.css";
+@import "authentication.css";
 @import "tasks.css";
 
     body {

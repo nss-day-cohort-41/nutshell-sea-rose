@@ -3,5 +3,4 @@ import {sessionStorageLogIn, createNewUser, makeUser} from "./AuthenticationProv
 // import API from "./authenticationProvider.js"
 
 sessionStorageLogIn();
-
 createNewUser()

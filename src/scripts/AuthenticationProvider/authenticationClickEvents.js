@@ -17,11 +17,14 @@ const sessionStorageLogIn = () => {
                         return user.user
                     }
                 })
-
+                // Validates if the information is being returned for user
                 if (typeof (user) == "undefined") {
                     alert("Username or Password are Wrong")
 
                 } else {
+                    //toggle for the page visibility
+                    document.querySelector(".underHeader").classList.toggle("hidden")
+                    document.querySelector(".loginContainer").classList.toggle("hidden")
                     // We decided to use a key value pairs for our session storage.
                     sessionStorage.id = user.id
                     sessionStorage.user = user.user
@@ -57,29 +60,46 @@ const createNewUser = () => {
         // Creating object with Factory function
         const newUserLoginInfo = makeUser(createUsername, createEmail, createPassword);
 
-        // If the password does not exist it will alert the user. Other wise 
         API.getAllUsers()
-        .then(userArray => {
-            const accountCheck = userArray.some(accounts => accounts.email === createEmail )
-            console.log(accountCheck)
-            if(accountCheck) {
-                alert("Email is Already Taken")
-            } else if (createPassword !== reInputPassword) {
-                alert("Passwords Do not match")
-        
-            } else {
-                API.createUser(newUserLoginInfo)
-                    .then(user => {
-                        
-                        sessionStorage.clear();
-                        sessionStorage.id = user.id
-                        sessionStorage.email = user.email
-                        sessionStorage.user = user.user
-                    })
-            }
-        })
-    
+            .then(userArray => {
+                // Checking JSON for similar input and JSON in the database.
+                const accountCheck = userArray.some(accounts => accounts.email === createEmail)
+                // If user email is already in the JSON then an error will be reported
+                if (accountCheck) {
+                    alert("Email is Already Taken")
+                } else if (createPassword !== reInputPassword) {
+                    alert("Passwords Do not match")
+
+                } else {
+                    document.querySelector(".underHeader").classList.toggle("hidden")
+                    document.querySelector(".registerForm").classList.toggle("hidden")
+                    API.createUser(newUserLoginInfo)
+                        .then(user => {
+                            sessionStorage.clear();
+                            sessionStorage.id = user.id
+                            sessionStorage.email = user.email
+                            sessionStorage.user = user.user
+                        })
+                }
+            })
+
     })
 }
+
+//toggle for the form visibility of registration
+const registerationFormButton = document.querySelector("#registerButton")
+
+registerationFormButton.addEventListener("click", (clickEvent) => {
+    document.querySelector(".registerForm").classList.toggle("hidden")
+    document.querySelector(".loginContainer").classList.toggle("hidden")
+})
+
+//toggle for the form visibility of Login
+const loginFormButton = document.querySelector("#returnToLogin")
+
+loginFormButton.addEventListener("click", (clickEvent) => {
+    document.querySelector(".registerForm").classList.toggle("hidden")
+    document.querySelector(".loginContainer").classList.toggle("hidden")
+})
 
 export { sessionStorageLogIn, createNewUser, makeUser }
