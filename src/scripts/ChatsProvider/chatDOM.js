@@ -1,18 +1,16 @@
-import messageAPI from "./chatAPI.js"
-import renderMessageToDom from "./chatDOM.js"
-//Written by Zach McWhirter
+// by Zach McWhirter
 
-//Places the rendered html code to the chat message container
-const postedMessageContainer = document.querySelector(".postedMessage__Container");
+const user = sessionStorage.getItem("user")
 
-const makeMessageList = () => {
-    postedMessageContainer.innerHTML = "";
-    messageAPI.getAllMessages()
-    .then((messageArray) => {
-        messageArray.forEach(msg => {
-            postedMessageContainer.innerHTML += renderMessageToDom(msg)
-        })
-    })
+// This will be the html represention
+const renderMessageToDom = (msgObject) => {
+        const renderMessage = `<section class="messageCard">
+        <div >
+            <p><font color="black"; font-weight:bold;> ${user}:</font> ${msgObject.message}</p>
+            <button id="editButton--${msgObject.id}">Edit</button>
+        </div>`      
+
+        return renderMessage
 }
 
-export default makeMessageList 
+export default renderMessageToDom; 

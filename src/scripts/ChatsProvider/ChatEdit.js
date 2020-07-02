@@ -13,5 +13,4 @@ const editMessageFunction = (msgId) => {
         })
 }
 
-
 export default editMessageFunction;

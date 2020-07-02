@@ -1,4 +1,3 @@
-
 import messageAPI from "./chatAPI.js"
 import renderMessageToDom from "./chatDOM.js"
 //Wriiten by Zach McWhirter
