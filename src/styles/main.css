@@ -5,10 +5,25 @@
 @import "tasks.css";
 
 body {
-    background-color: darkslategray;
+    background-color: #eb5e28
 }
 
 .friend__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.headerTitle1 {
+    display: flex;
+    justify-content: center;
+    border: solid; color: #403d39;
+    padding-bottom: 5px;
+    background-color: #fffcf2;
+}
+
+
+
+.new__containerevent {
     display: flex;
     flex-direction: row;
 }

@@ -1,3 +1,49 @@
+import makeTaskList from "./tasksList.js"
+import API from "./tasksProvider.js"
+import makeTask from "./tasksFactory.js"
+
+//const taskFormVisibility = document.querySelector("#toggle__tasks")
+
+//taskFormVisibility.addEventListener("click", (clickEvent) => {
+  //  document.querySelector(".newtask__form").classList.toggle("hidden")
+//})
+
+API.getAllTasks().then((response) => makeTaskList(response));
+
+//save a new one once all required fields are entered
+const recordTaskEntry = document.querySelector("#taskSave")
+recordTaskEntry.addEventListener("click", event => {
+    event.preventDefault(); //dont refresh page automatically
+    //const username = document.querySelector(".friend__name").value
+    //let taskTitle = document.querySelector("#taskTitle").value;
+    let taskName = document.querySelector("#taskName").value;
+    let expectedCompletionDate = document.querySelector("#expectedCompletionDate").value;
+
+    if (taskName === "" || expectedCompletionDate === "") {
+        alert("Please fill out all fields!")
+
+    } else {
+        //if all fields are filled out will create a new article object
+        let newTask = makeTask(taskName, expectedCompletionDate)
+        console.log(newTask)
+        API.saveTaskEntry(newTask)
+        API.getAllTasks().then((response) => makeTaskList(response));
+    }
+})
+
+document.querySelector(".previewTask__Container").addEventListener("click", event => {
+    if (event.target.id.startsWith("deleteTask--")) {
+        const taskToDelete = event.target.id.split("--")[1]
+        console.log(taskToDelete);
+        API.deleteTask(taskToDelete)
+            .then(makeTaskList)
+    }
+})
+
+
+
+
+/*
 import API from './tasksProvider.js';
 import renderedTasksDOM from './tasksList.js';
 import makeTask from './tasksFactory.js';
@@ -57,7 +103,8 @@ const clearInputs = () => {
 
 
 //Invoking the delete and Edit listener
-registerListeners.registerListeners();
+//registerListeners.registerListeners();
+
 
 
 

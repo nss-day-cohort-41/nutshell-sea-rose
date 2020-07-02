@@ -6,6 +6,7 @@
     display: none;
 }
 
-.tasks__card {
-    background-color: wheat;
+.task__card {
+    background-color: #fffcf2;
+    border: solid; color: #403d39;
 }

@@ -1,7 +1,32 @@
-import API from './tasksProvider.js';
-import makeTaskHTMLRepresentation from './tasksDOM.js';
+//import API from './tasksProvider.js';
+//import makeTaskHTMLRepresentation from './tasksDOM.js';
 
 
+import API from "./tasksProvider.js"
+import makeTaskHTML from "./tasksDOM.js"
+
+//render the HTML code into the queried field
+
+const taskContainer = document.querySelector(".previewTask__Container");
+//Getting the data from the json then activating my event listeners such as delete
+const makeTaskList = () => {
+    taskContainer.innerHTML = "";
+    API.getAllTasks()
+        .then((taskArray) => {
+            const allTasks = taskArray.map(item => {
+                const htmlComponent = `<p>${item.title}</p>`
+                return htmlComponent;
+            });
+            taskArray.forEach(item => {
+                taskContainer.innerHTML += makeTaskHTML(item);
+            });
+
+        })
+}
+
+
+export default makeTaskList;
+/*
 //Code by Trigg Summs
 
 
@@ -28,3 +53,4 @@ let renderedTasksDOM = {
   }
   
   export default renderedTasksDOM;
+  */

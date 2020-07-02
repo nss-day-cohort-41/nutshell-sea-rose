@@ -7,5 +7,7 @@
   }
 
   .event__card {
-      background-color: wheat
+      background-color: #fffcf2;
+      border: solid; color: #403d39;;
+   
   }

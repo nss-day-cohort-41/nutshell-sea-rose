@@ -2,6 +2,23 @@
 //This contains my HTML representation and Converter Function
 
 
+const makeTaskHTML = (taskObj) => {
+    const domElement = `
+    <div class="task__card">
+    <p class="hideId">${taskObj.id}</p>
+    <h2>${taskObj.taskTitle}</h2>
+    <p><i>Expected Completion Date:</i>${taskObj.expectedCompletionDate}
+	<button id="deleteTask--${taskObj.id}">Delete Task</button>
+	<button id="editTask--${taskObj.id}">Edit</button>
+	`
+    return domElement
+}
+
+export default makeTaskHTML;
+
+
+
+/*
 const makeTaskHTMLRepresentation = {
     taskConverter(taskObj) {
 

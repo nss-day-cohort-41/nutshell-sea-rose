@@ -1,3 +1,32 @@
+const API = {
+    //get articles from json
+    getAllTasks: () => {
+        return fetch("http://localhost:3000/tasks")
+            .then(response => response.json());
+    },
+    saveTaskEntry: (newTaskObject) => {
+        return fetch("http://localhost:3000/tasks", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newTaskObject)
+        }).then(response => response.json());
+    },
+    //delete articles from json
+    deleteTask: (id) => {
+        return fetch(`http://localhost:3000/tasks/${id}`, {
+            method: "DELETE"
+        }).then(response => response.json());
+    }
+}
+export default API;
+
+
+
+
+
+/*
 import renderedTasksDOM from './tasksList.js';
 import makeTask from './tasksFactory.js';
 
@@ -63,3 +92,4 @@ const API = {
 }
 
 export default API;
+*/

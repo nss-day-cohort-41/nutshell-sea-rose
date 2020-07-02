@@ -11,9 +11,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    border: solid; color: #403d39;
 
 }
 
 .user__card {
-    background-color: wheat;
+    background-color: #fffcf2;
+   
 }

@@ -3,15 +3,15 @@
 
 
 
-const makeTask = (taskTitle, taskName, expectedCompletionDate, completeStatus, userId) => {
+const makeTask = (taskTitle, expectedCompletionDate) => {
         const taskObj = {
 
 
                 taskTitle: taskTitle,
-                taskName: taskName,
+                //taskName: taskName,
                 expectedCompletionDate: expectedCompletionDate,
-                completeStatus: false,
-                userId: userId
+                //completeStatus: false,
+                //userId: userId
         }
 
         return taskObj;

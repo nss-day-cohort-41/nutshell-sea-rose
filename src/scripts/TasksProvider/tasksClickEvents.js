@@ -1,3 +1,5 @@
+/*
+
 import API from './tasksProvider.js';
 import renderTaskEntries from "./tasksList.js";
 import updateFormFields from "./tasksFieldForms.js"
@@ -59,7 +61,7 @@ export default {
 			})
 			 */
 
-
+/*
 			const clearInputs = () => {
 
 				document.querySelector("#taskTitle").value = "";
@@ -70,3 +72,4 @@ export default {
 			  
 		
 }
+*/
