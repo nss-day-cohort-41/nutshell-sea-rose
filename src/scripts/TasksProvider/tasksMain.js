@@ -2,10 +2,11 @@ import API from './tasksProvider.js';
 import renderedTasksDOM from './tasksList.js';
 import makeTask from './tasksFactory.js';
 import registerListeners from './tasksClickEvents.js';
-//import updateFormFields from './tasksFieldForms.js'
+
 
 
 //Code by Trigg Summs
+
 
 //This will pull all my TASKs in the list and render to the DOM
 API.getTasks()
@@ -20,7 +21,8 @@ document.querySelector("#taskSave")
     let taskTitle = document.querySelector("#taskTitle").value;
     let taskName = document.querySelector("#taskName").value;
     let expectedCompletionDate = document.querySelector("#expectedCompletionDate").value;
-
+    //let currentUser = sessionStorage.getItem("user");
+    //console.log(currentUser)
 
     if (taskTitle !== "" && taskName !== "" && expectedCompletionDate !== "") {
       let createdTaskEntry = makeTask(taskTitle, taskName, expectedCompletionDate)
@@ -41,30 +43,8 @@ const clearInputs = () => {
 }
 
 
-
-
-
-/* 
-		//Event Listener for hiding the Task Section
-
-		const taskFormVisibilityButton = document.querySelector("#toggle__tasks")
-		taskFormVisibilityButton.addEventListener("click", (clickEvent) => {
-			document.querySelector(".newtask__form").classList.toggle("hidden")
-		})
-
- */
-
-
-
 //Invoking the delete and Edit listener
 registerListeners.registerListeners();
-
-
-
-
-
-
-
 
 
 

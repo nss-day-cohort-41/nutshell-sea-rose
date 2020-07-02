@@ -3,6 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #403D39;
+
 }
 
 .loginButtonArea, .registrationButtonArea {
@@ -10,8 +12,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    color: #403D39;
 }
 
-#loginButton, #create-account-button {
+#loginButton, #create-account-button, #registerButton {
     margin: 7px;
+    color: #403D39;
 }
