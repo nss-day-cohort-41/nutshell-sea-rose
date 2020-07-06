@@ -6,18 +6,34 @@
     display: none;
 }
 
+#friendForm {
+    background-color: gray;
+}
+
+.save__friend {
+    background: #FF9F1C;
+}
+
+#toggle__friends {
+    background: #FF9F1C;
+}
+
 .postedFriends__Selection {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    /* justify-content: center; */
 
 }
 
 .user__card {
-    background-color: cornsilk;
+    background-color: #FF9F1C;
+    border-top: gray 3px solid;
+    border-bottom: gray 3px solid;
+    border-left: gray 2px solid;
+    border-right: gray 2px solid;
+    margin: 1px;
 }
 
 .friend__container {

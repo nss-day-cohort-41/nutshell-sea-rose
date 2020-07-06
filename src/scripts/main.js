@@ -2,10 +2,15 @@ import {sessionStorageLogIn, createNewUser, makeUser} from "./AuthenticationProv
 // import API from "./authenticationProvider.js"
 
 
-import {postMessage, editMessageEvent} from "./ChatsProvider/chatsClickEvent.js"
-import makeMessageList from "./ChatsProvider/chatsList.js"
+import {postMessage, editMessageEvent} from "./ChatsProvider/chatClickEvents.js"
+import makeMessageList from "./ChatsProvider/chatList.js"
+
+// Function Calls
+
+
 sessionStorageLogIn();
-createNewUser()
+
+makeUser();
 
 createNewUser();
 

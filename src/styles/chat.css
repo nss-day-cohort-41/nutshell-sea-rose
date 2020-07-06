@@ -1,0 +1,63 @@
+.outerChat___Container {
+    background-color: gray;
+    width: 30%;
+    border: #403D39 4px solid;
+    border-radius:10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* .messageCard{
+    background-color: red;
+}    */
+/* .postedMessage__Container {
+    
+} */
+
+
+/* .message__Form{
+    
+} */
+/* .newMessage__Container{
+
+} */
+
+#newMessageContent {
+    background-color: white;
+    width: 100%;
+    
+}
+
+.messageCard__div {
+    background-color: white;
+    border-radius: 10px;
+    height: auto;
+    margin: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: black 1px solid;
+}
+p {
+    color: #252422;
+}
+#chatH2__container {
+    font-size: 20px;
+    background-color: #FF9F1C;
+    border-radius: 5px;
+    height: auto;
+    width: 90%;
+    margin: 15px;
+    border: white 1px solid;
+}
+#chatH2 {
+    text-shadow: 1px 1px 1px darkgray;
+    display: flex;
+    justify-content: center;
+    
+} 
+
+#sendMessageButton {
+    background: #FF9F1C;
+}
+
+/* green #47a025
+blue #2A7AE0 */

@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="./styles/main.css">
     <!-- FONTS COLLECTION -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&family=Squada+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
     <!-- END OF FONTS -->
     <title>NutShell: Sea Rose</title>
 </head>
 <body>
     <section class="loginContainer">
-        <!-- To late in the game to change. -->
-        <!--The Sign in and Registration area-->
+        
         <section class= "loginForm"></section>
             <form class="loginFormSection">
                 <h5>Sign In</h5>
@@ -48,19 +48,23 @@
             </div>
         </section>
     </section>
-
+    <div class="header__container">
+        <div class="header">
+            <img src="https://images.freeimages.com/images/small-previews/be1/acorn-1635444.jpg" alt="logo" />
+            <h1>NutShell</h1>
+            
+        </div>
+    </div>
     <!--End of Our Main Banner -->
     <div class="underHeader hidden">
         <div class="header__logo"></div>
-            <header class="headerTitle1">
-                <h1>NutShell: "SEA ROSE"</h1>
-            </header>
+    <div class=>       
         <div class="underHeader__top">
             
             <!--Start of Section Containing our User Friends List, we will need to talk about how best to label out this portion-->
             <button id="toggle__friends">Add A Friend</button>
             <section class="newFriend__form hidden">
-                <form action="">
+                <form id="friendForm" action="">
                     <fieldset>
                         <label for="">
                             Add User
@@ -176,14 +180,16 @@
 <!--Banner Right Contains Chat and USER MESSAGE CENTER-->
 <div class="underHeader__Right">
     <div class="outerChat___Container">
-        <h2>Chat Messaging</h2>
+        <div id="chatH2__container">
+            <h2 id="chatH2">Chat Messaging</h2>
+        </div>
         <section class="postedMessage__Container">
             <!--renderMessageToDom will go here-->
         </section>
             <form id="message__Form" action="">
                 <input type="hidden" id="messageId" value="" />
                     <label for="chat__Message"></label>
-                    <textarea placeholder="Your Message Here..." name="newMessage" class="input__field" id="newMessageContent" cols="40" rows="2"></textarea>
+                    <textarea placeholder="Your Message Here..." name="newMessage" class="input__field" id="newMessageContent" maxlength="150" cols="50" rows="2"></textarea>
 
             </form>
 

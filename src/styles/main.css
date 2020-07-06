@@ -3,22 +3,54 @@
 @import "friends.css";
 @import "authentication.css";
 @import "tasks.css";
+@import "chat.css";
+
+
+* {
+    box-sizing: border-box;
+}
+.header__container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 200px;
+    margin-left: 30%
+    
+} 
+.header img {
+   
+    float: left;
+    width: auto;
+    height: 120px;
+    
+  }
+  
+  .header h1 {
+  
+    margin-left: 15%;
+    font-size: 80px;
+    font-family:'Squada One', cursive;
+    color: #FF9F1C;
+    text-shadow: 1px 1px 1px #000;
+  }
 
 body {
-    background-color: #CCC5B9;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color:white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-    .header{
+/* .underHeader{
+        
+        background-color: red;
+    } */
+    /* .header{
         background-color: #403D39;
     }
 
-    .underHeader{
-  
-        background-color: #FFFCF2;
-        
     
-    }
 
     .underHeader__Top {
         display: flex;
@@ -32,19 +64,19 @@ body {
 
     .underHeader__Left {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex: 3;
-    background-color: #FFFCF2;
-    }
+    background-color: green;
+    } */
 
-    .underHeader__Right{
-    display: flex;
+   /* .underHeader__Right{
+     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: #EB5E28;
+    background-color: #403D39;
     }
 
-    .footer{
+     .footer{
     display: flex;
     }
 
@@ -52,14 +84,14 @@ body {
 
 
 /* Targetting TesxtAreas */
-textarea {
+/* textarea {
     width: 100%;
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    background-color: #f8f8f8;
+    background-color: #CCC5B9;
     font-size: 16px;
     resize: none;
   }
@@ -67,7 +99,7 @@ textarea {
 
 
 /* Targetting Buttons Class's */
-button{
+/* button{
 display:flex;
     padding: 5px 5px;
     font-size: 15px;
@@ -78,44 +110,45 @@ display:flex;
     color: #fff;
     background-color: #EB5E28;
     border: none;
-    border-radius: 1px;
-    box-shadow: 0 9px #999;
+    border-radius: 7px;
+    border: #252422 1px solid;
     display: inline-block;
-  }
-  
-  .button:hover {background-color: #e2a602}
+  } */
+
+  /* .button:hover {background-color: #e2a602}
   
   .button:active {
     background-color: #ac6a2d;
-    box-shadow: 0 5px #666;
+    box-shadow: 0 2px #666;
     transform: translateY(4px);
-  }
+    border-radius: 10px;
+  } */
     
 
 
 /* Controls our Main title  */
-h1{
+/* h1{
     color: rgb(0, 0, 0);
     font-size: 50px;
     align-items: center;
     justify-content: center;
-    font-family: 'Cinzel', serif;
+    font-family: "Patua One", serif;
     margin: 0em;
     padding: 0em;
     text-shadow:1px 1px rgb(233, 176, 91);
     text-align: center;
-    
+ 
 
-}
+}    */
 /* Friends list title  */
-h6{
+/* h6{
     color: purple;
     font-size: 20px;
     align-items: center;
     justify-content: center;
-}
+} */
 /*This is the control for header inside the tasks,events,articles  */
-.SectionsHeaders{
+/* .SectionsHeaders{
     color: blue;
     font-size: 15px;
     align-items: center;
@@ -129,4 +162,4 @@ p{
     color: black;
     text-shadow:1px 1px (#252422);
 
-}
+}  */
