@@ -6,6 +6,10 @@
     display: none;
 }
 
+#articleForm {
+    background-color: gray;
+}
+
 .article__card {
     background-color: cornsilk;
     display: inline-flex;

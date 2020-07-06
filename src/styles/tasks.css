@@ -6,6 +6,10 @@
     display: none;
 }
 
+#taskForm {
+    background-color: gray;
+}
+
 /* .tasks__card {
     background-color: cornsilk;
     display: inline-flex;

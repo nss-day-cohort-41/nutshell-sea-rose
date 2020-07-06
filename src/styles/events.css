@@ -1,13 +1,17 @@
-  .hideId {
-      visibility: hidden;
-  }
+.hideId {
+    visibility: hidden;
+}
 
-  .hidden {
-      display: none;
-  }
+.hidden {
+    display: none;
+}
 
-  .event__card {
-    background-color: cornsilk;
-  
-  }
+.event__card {
+  background-color: cornsilk;
+
+}
+
+#eventForm {
+  background-color: gray;
+}
 
