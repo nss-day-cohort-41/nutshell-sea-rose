@@ -28,12 +28,18 @@
 }
 
 .user__card {
-    background-color: #FF9F1C;
+    background-color: gray;
+    color: firebrick;
     border-top: gray 3px solid;
-    border-bottom: gray 3px solid;
+    border-bottom: black 3px solid;
     border-left: gray 2px solid;
-    border-right: gray 2px solid;
+    border-right: black 2px solid;
     margin: 1px;
+    overflow-wrap: break-word;
+    max-width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .friend__container {
