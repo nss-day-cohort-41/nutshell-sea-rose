@@ -11,22 +11,18 @@
 }
 .header__container {
     display: flex;
+    
     flex-direction: column;
     background-color: white;
-    height: 200px;
     margin-left: 30%
-    
 } 
 .header img {
-   
     float: left;
     width: auto;
     height: 120px;
-    
   }
   
   .header h1 {
-  
     margin-left: 15%;
     font-size: 80px;
     font-family:'Squada One', cursive;
@@ -45,50 +41,40 @@ body {
 button {
     background-color: #FF9F1C;
     color: black;
+    width: fit-content;
+}
+
+.listH3 {
+    color: firebrick;
+    text-shadow: 1px 1px 1px #000;
+    width: fit-content;
+    height: fit-content;
+}
+
+.underHeader__col {
+    display: flex;
+    flex: 5;
+    flex-direction: column;
 }
 
 
+.underHeader__Left {
+flex: 3.5;
+}
 
+.underHeader__Right{
+flex: 1.5;
+}
 
-
-
-/* .underHeader{
-        
-        background-color: red;
-    } */
-    /* .header{
-        background-color: #403D39;
-    }
-
-    
-
-    .underHeader__Top {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start; 
-        padding: 10px;
-        margin: 10px;
-        background-color: #EB5E28;
-
-    }
-
-    .underHeader__Left {
+.underHeader__row {
     display: flex;
     flex-direction: row;
-    flex: 3;
-    background-color: green;
-    } */
+}
 
-   /* .underHeader__Right{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    background-color: #403D39;
-    }
 
-     .footer{
-    display: flex;
-    }
+    /* .footer{
+display: flex;
+} */
 
 
 

@@ -29,6 +29,7 @@
 
 .user__card {
     background-color: gray;
+    text-shadow: 1px 1px 1px #000;
     color: firebrick;
     border-top: gray 3px solid;
     border-bottom: black 3px solid;
@@ -36,7 +37,8 @@
     border-right: black 2px solid;
     margin: 1px;
     overflow-wrap: break-word;
-    max-width: 10%;
+    max-width: 10vw;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

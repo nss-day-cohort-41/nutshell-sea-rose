@@ -53,7 +53,7 @@
     <div class="header__container">
         <div class="header">
             <img src="https://images.freeimages.com/images/small-previews/be1/acorn-1635444.jpg" alt="logo" />
-            <h1>NutShell</h1>
+            <h1><u>NutShell</u></h1>
 
         </div>
     </div>
@@ -61,24 +61,28 @@
     <div class="underHeader hidden">
         <div class="header__logo"></div>
         
-            <div class="underHeader__top">
-
+            <div class="underHeader__col">
+            <!-- <div class="underHeader__row"> -->
                 <!--Start of Section Containing our User Friends List, we will need to talk about how best to label out this portion-->
-                <button id="toggle__friends">Add A Friend</button>
-                <section class="newFriend__form hidden">
-                    <form id="friendForm" action="">
-                        <fieldset>
-                            <label for="">
-                                Add User
-                                <input type="text" name="friend__name" class="friend__name">
-                            </label>
-                            <button type="submit" class="save__friend">Add to Friends List</button>
-                        </fieldset>
-                    </form>
-                </section>
-                <h3>Friends List:</h3>
-                <div class="friend__container">
-                    <article id="hidden__friends" class="postedFriends__Selection"></article>
+                <div class="friend_section_container">
+                    <button id="toggle__friends">Add A Friend</button>
+                    <section class="newFriend__form hidden">
+                        <form id="friendForm" action="">
+                            <fieldset>
+                                <label for="">
+                                    Add User
+                                    <input type="text" name="friend__name" class="friend__name">
+                                </label>
+                                <button type="submit" class="save__friend">Add to Friends List</button>
+                            </fieldset>
+                        </form>
+                    </section>
+                    <div class="listH3">
+                        <h3>Friends List</h3>
+                    </div>
+                    <div class="friend__container">
+                        <article id="hidden__friends" class="postedFriends__Selection"></article>
+                    </div>
                 </div>
                 <!--Banner Left Contains Tasks and Events section  -->
                 <div class="underHeader__Left">
@@ -110,7 +114,9 @@
                             <button id="SaveChanges" type="submit" value="">Submit Changes</button>
                             </fieldset>
                         </section>
-                        <h3 class=" SectionsHeaders">My Tasks:</h3>
+                        <div class="listH3">
+                            <h3 class="SectionsHeaders">My Tasks</h3>
+                        </div>
                         <article id="previewTask__Container"></article>
                         <!-- Start of Events Container -->
                         <section class="events">
@@ -135,20 +141,18 @@
                                     </fieldset>
                                 </form>
                             </section>
-                            <h3 class=" SectionsHeaders">My Events:</h3>
+                            <div class="listH3">
+                                <h3 class=" SectionsHeaders">My Events</h3>
+                            </div>
                             <article id="hidden__events" class="postedEvents__Selection"></article>
                         </section>
                     </section>
-
-
-
 
                     <section class="news__mainRightContainer">
                         <!--No need for Container...like Events/Tasks gets?-->
 
                         <!--Button to populate a form for articles-->
                         <button id="toggle__articles">New Article</button>
-
 
                         </fieldset>
                         <!--form that will allow user to input information-->
@@ -173,7 +177,9 @@
                             </form>
                         </section>
 
-                        <h3 class=" SectionsHeaders">My News:</h3>
+                        <div class="listH3">
+                            <h3 class=" SectionsHeaders">My News</h3>
+                        </div>
                         <article id="hidden__article" class="postedNews__Selection"></article>
                     </section>
 
@@ -201,6 +207,7 @@
 
                     </div>
                 </div>
+            </div>    
             </div>  
     </div>          
                 <!--End of Banners and BEGINs FOOTER -->
